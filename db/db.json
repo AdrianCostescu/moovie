@@ -1,0 +1,271 @@
+{
+  "movie": [
+    {
+      "title": "Don't Look Up",
+      "release": "05/12/2021",
+      "director": "Adam McKay",
+      "writers": ["Adam McKay", "David Sirota"],
+      "stars": [
+        "Leonardo DiCaprio",
+        "Jennifer Lawrence",
+        "Meryl Streep",
+        "Cate Blanchett",
+        "Rob Morgan",
+        "Jonah Hill",
+        "Mark Rylance"
+      ],
+      "description": "Kate Dibiasky (Jennifer Lawrence), an astronomy grad student, and her professor Dr. Randall Mindy (Leonardo DiCaprio) make an astounding discovery of a comet orbiting within the solar system. The problem - it's on a direct collision course with Earth. The other problem? No one really seems to care. Turns out warning mankind about a planet-killer the size of Mount Everest is an inconvenient fact to navigate. With the help of Dr. Oglethorpe (Rob Morgan), Kate and Randall embark on a media tour that takes them from the office of an indifferent President Orlean (Meryl Streep) and her sycophantic son and Chief of Staff, Jason (Jonah Hill), to the airwaves of The Daily Rip, an upbeat morning show hosted by Brie (Cate Blanchett) and Jack (Tyler Perry). With only six months until the comet makes impact, managing the 24-hour news cycle and gaining the attention of the social media obsessed public before it's too late proves shockingly comical - what will it take to get the world to just look up?",
+      "score": "7.2",
+      "image": [
+        "https://lh3.googleusercontent.com/BNcclAWY_8od42WO3B5cJPTXW1kDTPnN-Rher9uLZBd2GK4IZs-WcQPGYzSbafxzaRzQ_nU3W_til45G261lkz_22LY4B8vDnc84EYgL9w",
+        "https://m.media-amazon.com/images/M/MV5BZWFmZDVhY2YtODI4MC00YTAwLWI1NGUtYTQ3NjdkODU0YmZiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX100_CR0,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZjBiOTJkYzItZDg5My00MDFjLTllYjMtMjhhMWExZjUwNzc1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR25,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZjJjZjFiNTQtOTgzZC00ZjlkLWI2YTQtYWRlMzdjODhiZjlmXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX100_CR0,0,100,100_AL_.jpg"
+      ],
+      "time": "2h 18m",
+      "type": ["Comedy", "Drama", "Sci-Fi"],
+      "id": 1
+    },
+    {
+      "title": "The Unforgivable",
+      "release": "05/12/2021",
+      "director": "Nora Fingscheidt",
+      "writers": ["Peter Craig", "Hillary Seitz"],
+      "stars": [
+        "Sandra Bullock",
+        "Viola Davis",
+        "Vincent D'Onofrio",
+        "Jon Bernthal",
+        "Richard Thomas",
+        "Linda Emond",
+        "Aisling Franciosi"
+      ],
+      "description": "Released from prison after serving a sentence for a violent crime, Ruth Slater (Bullock) re-enters a society that refuses to forgive her past. Facing severe judgment from the place she once called home, her only hope for redemption is finding the estranged younger sister she was forced to leave behind.",
+      "score": "7.3",
+      "image": [
+        "https://static.cinemagia.ro/img/db/movie/31/05/335/the-unforgivable-221966l.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMWM2MTY5NDUtMjIwOC00NjQ5LTkxMWMtYzJmNGIwNWRjNmI2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR25,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNDg0NWM3MDUtMzAyZC00ZjliLWE3YmYtMmE5NzA1MTY1NWRmXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_UY100_CR25,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOGJiOGY4ZGItOTI0MS00NWVmLWE5NDEtZmVmNTI5NTFjOWIxXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_UY100_CR25,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 51m",
+      "type": ["Crime", "Drama"],
+      "id": 2
+    },
+    {
+      "title": "Red Notice",
+      "release": "05/12/2021",
+      "director": "Rawson Marshall Thurber",
+      "writers": ["Rawson Marshall Thurber"],
+      "stars": [
+        "Dwayne Johnson",
+        "Ryan Reynolds",
+        "Gal Gadot",
+        "Ritu Arya",
+        "Chris Diamantopoulos",
+        "Ivan Mbakop",
+        "Vincenzo Amato"
+      ],
+      "description": "When an Interpol-issued Red Notice the highest level warrant to hunt and capture the world's most wanted goes out, the FBI's top profiler John Hartley (Dwayne Johnson) is on the case. His global pursuit finds him smack dab in the middle of a daring heist where he's forced to partner with the world's greatest art thief Nolan Booth (Ryan Reynolds) in order to catch the world's most wanted art thief, The Bishop (Gal Gadot). The high-flying adventure that ensues takes the trio around the world, across the dance floor, trapped in a secluded prison, into the jungle and, worst of all for them, constantly into each other's company.",
+      "score": "6.3",
+      "image": [
+        "https://m.media-amazon.com/images/M/MV5BZmRjODgyMzEtMzIxYS00OWY2LTk4YjUtMGMzZjMzMTZiN2Q0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZjVjODAwMjYtMjZhYi00Nzc1LWFiZmQtMmQ0ZTYyYzU1MjBmXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR64,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMzQxOTAzZDEtY2FiYy00MzU1LWE0YmMtZmZlNjc1M2E4ZjRiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR64,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOWI2MmMyY2MtNTkwZS00ZTdhLWFhYjUtZDYxMTUzMjI0YmRkXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_UX100_CR0,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 58m",
+      "type": ["Action", "Comedy", "Thriller"],
+      "id": 3
+    },
+    {
+      "title": "Spider-Man: No Way Home",
+      "release": "05/12/2021",
+      "director": "Jon Watts",
+      "writers": ["Chris McKenna", "Erik Sommers", "Stan Lee", "Steve Ditko"],
+      "stars": [
+        "Tom Holland",
+        "Zendaya Maree",
+        "Benedict Cumberbatch",
+        "Jacob Batalon",
+        "Jon Favreau",
+        "Jamie Foxx",
+        "Willem Dafoe"
+      ],
+      "description": "Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters the multiverse, bringing in monstrous villains that could destroy the world.",
+      "score": "8.7",
+      "image": [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/snh_online_6072x9000_posed_01.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNzgwNTVjYWQtNTY3YS00NzIzLTg1ZDAtYTA5MDNkNWZhZjA5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UY100_CR45,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BY2M2NjU2MjMtMDg4Yy00YWNhLWIzYzMtNWQxNDc1NzhjMzBiXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UY100_CR45,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTNiNGNjNmQtZjcwMi00ZGM1LTg3MzUtY2JiOGNjNWVlNjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX100_CR0,0,100,100_AL_.jpg"
+      ],
+      "time": "2h 28m",
+      "type": ["Action", "Adventure", "Fantasy"],
+      "id": 4
+    },
+    {
+      "title": "Scream",
+      "release": "05/12/2021",
+      "director": "Matt Bettinelli-Olpin",
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "stars": [
+        "Neve Campbell",
+        "Courteney Cox",
+        "David Arquette",
+        "Melissa Barrera",
+        "Jack Quaid",
+        "Mikey Madison",
+        "Jenna Ortega"
+      ],
+      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
+      "score": "7.0",
+      "image": [
+        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
+        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 54m",
+      "type": ["Horror", "Mystery", "Thriller"],
+      "id": 5
+    },
+    {
+      "title": "The Ice Age Adventures",
+      "release": "05/12/2021",
+      "director": "John C. Donkin",
+      "writers": ["Jim Hecht", "William Schifrin", "Ray DeLaurentis"],
+      "stars": [
+        "Utkarsh Ambudkar",
+        "Sean Kenin",
+        "Jake Green",
+        "Aaron Harris",
+        "Dominique Jennings",
+        "Justina Machado",
+        "Simon Pegg"
+      ],
+      "description": "Desperate for some distance from their older sister Ellie, the thrill-seeking possum brothers Crash and Eddie set out to find a place of their own, but quickly find themselves trapped in a massive cave underground. They are rescued by the one-eyed, adventure-loving, dinosaur-hunting weasel, Buck Wild, and together they must face the unruly dinosaurs who inhabit the Lost World.",
+      "score": "4.7",
+      "image": [
+        "https://www.disneyplusinformer.com/wp-content/uploads/2022/01/The-Ice-Age-Adventures-of-Buck-Wild-Character-Poster-1.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMWNkYzUzNzYtMTYwZS00ZDgwLWE2ZmMtN2E3NmQ2NGRmNTg4XkEyXkFqcGdeQXVyNjU5MzgwMDM@._V1_UY100_CR39,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNWZjNmY3YjktNGIzYS00YTAzLWFmYzUtYzBhM2IxMThjZDQ4XkEyXkFqcGdeQXVyMTk4MTY0MDA@._V1_UY100_CR39,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZDI1MGYwNTctNTRkOS00NTBlLTgxZTEtODkzYmEzY2ExYmQ2XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_UY100_CR39,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 22m",
+      "type": ["Animation", "Comedy", "Family"],
+      "id": 6
+    },
+    {
+      "title": "Scream",
+      "release": "05/12/2021",
+      "director": "Matt Bettinelli-Olpin",
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "stars": [
+        "Neve Campbell",
+        "Courteney Cox",
+        "David Arquette",
+        "Melissa Barrera",
+        "Jack Quaid",
+        "Mikey Madison",
+        "Jenna Ortega"
+      ],
+      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
+      "score": "7.0",
+      "image": [
+        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
+        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 54m",
+      "type": ["Horror", "Mystery", "Thriller"],
+      "id": 7
+    },
+    {
+      "title": "Scream",
+      "release": "05/12/2021",
+      "director": "Matt Bettinelli-Olpin",
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "stars": [
+        "Neve Campbell",
+        "Courteney Cox",
+        "David Arquette",
+        "Melissa Barrera",
+        "Jack Quaid",
+        "Mikey Madison",
+        "Jenna Ortega"
+      ],
+      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
+      "score": "7.0",
+      "image": [
+        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
+        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 54m",
+      "type": ["Horror", "Mystery", "Thriller"],
+      "id": 8
+    },
+    {
+      "title": "Scream",
+      "release": "05/12/2021",
+      "director": "Matt Bettinelli-Olpin",
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "stars": [
+        "Neve Campbell",
+        "Courteney Cox",
+        "David Arquette",
+        "Melissa Barrera",
+        "Jack Quaid",
+        "Mikey Madison",
+        "Jenna Ortega"
+      ],
+      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
+      "score": "7.0",
+      "image": [
+        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
+        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 54m",
+      "type": ["Horror", "Mystery", "Thriller"],
+      "id": 9
+    },
+    {
+      "title": "Scream",
+      "release": "05/12/2021",
+      "director": "Matt Bettinelli-Olpin",
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "stars": [
+        "Neve Campbell",
+        "Courteney Cox",
+        "David Arquette",
+        "Melissa Barrera",
+        "Jack Quaid",
+        "Mikey Madison",
+        "Jenna Ortega"
+      ],
+      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
+      "score": "7.0",
+      "image": [
+        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
+        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+      ],
+      "time": "1h 54m",
+      "type": ["Horror", "Mystery", "Thriller"],
+      "id": 10
+    }
+  ],
+
+  "favorite": [
+    {
+      "userId": 1,
+      "movieId": 3
+    }
+  ]
+}
