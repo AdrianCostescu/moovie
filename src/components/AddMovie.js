@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { color } from "../styles/color";
 import styled from "styled-components";
 import { usePostVideoMutation } from "../hooks/usePostVideoMutation";
@@ -7,12 +7,32 @@ import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
 import MenuItem from "@mui/material/MenuItem";
 
-const CATEGORIES = ["Adventure", "Action"];
+const CATEGORIES = [
+  "Adventure",
+  "Action",
+  "Drama",
+  "Crime",
+  "Comedy",
+  "Thriller",
+  "Fantasy",
+  "Horror",
+  "Mystery",
+  "Family",
+];
 
-const AddMovie = ({ handleCancel }) => {
+const AddMovie = ({ handleCancel, setSnackbar, onSuccesAdd }) => {
   const [types, setTypes] = useState([]);
+  const [images, setImage] = useState([]);
+  const [addMovie, data] = usePostVideoMutation();
 
-  const [addMovie] = usePostVideoMutation();
+  console.log(data);
+
+  useEffect(() => {
+    if (data.data?.postVideo) {
+      setSnackbar(true);
+      onSuccesAdd();
+    }
+  }, [data]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,12 +42,14 @@ const AddMovie = ({ handleCancel }) => {
 
     const response = await addMovie({
       variables: {
-        input: { ...input, type: types },
+        input: { ...input, type: types, image: images },
       },
-    }).catch((error) => {
-      console.error(error);
-      return error;
-    });
+    })
+      .catch((error) => {
+        console.error(error);
+        return error;
+      })
+      .then(handleCancel);
   }
 
   function handleTypeChange({ target: { value } }) {
@@ -54,7 +76,12 @@ const AddMovie = ({ handleCancel }) => {
         </Label>
         <Label>
           Cover URL
-          <Input name="cover" width="560px" type="text"></Input>
+          <Input
+            width="560px"
+            type="text"
+            value={images}
+            onChange={(e) => setImage([e.target.value])}
+          ></Input>
         </Label>
         <Label>
           Description
@@ -68,6 +95,7 @@ const AddMovie = ({ handleCancel }) => {
               value={types}
               onChange={handleTypeChange}
               renderValue={(selected) => selected.join(", ")}
+              sx={{ width: "315px", height: "48px" }}
             >
               {CATEGORIES.map((name) => (
                 <MenuItem key={name} value={name}>
@@ -156,8 +184,6 @@ const Textarea = styled.textarea`
   border-radius: 8px;
 `;
 
-const Option = styled.option``;
-
 const Button = styled.button`
   appearance: none;
   background: none;
@@ -180,4 +206,5 @@ const ButtonPosition = styled.div`
   margin-top: 90px;
   margin-bottom: 74px;
 `;
+
 export default AddMovie;

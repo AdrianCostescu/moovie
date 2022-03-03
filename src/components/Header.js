@@ -4,6 +4,35 @@ import { color } from "../styles/color";
 import { useGetMovies } from "../hooks/useGetMovies";
 import CircularProgress from "@mui/material/CircularProgress";
 
+const Header = () => {
+  const { movies, error, loading } = useGetMovies();
+  const random = 1 + Math.floor(Math.random() * movies.length - 1);
+
+  return (
+    <HeaderBox>
+      {loading ? (
+        <CircularProgress />
+      ) : error ? (
+        <Error>There was a network error. Please try again.</Error>
+      ) : (
+        <>
+          <LeftSide>
+            <Title>{movies[random].title}</Title>
+            <SubTitle>{movies[random].description}</SubTitle>
+            <ButtonPosition>
+              <Button color={color.redRibbon}>Watch trailer</Button>
+              <Button color={color.shark}>
+                <Span>+</Span>Add to list
+              </Button>
+            </ButtonPosition>
+          </LeftSide>
+          <Image img={movies[random].image[0]}></Image>
+        </>
+      )}
+    </HeaderBox>
+  );
+};
+
 const HeaderBox = styled.div`
   background-color: ${color.ebony};
   height: 700px;
@@ -71,34 +100,5 @@ const Image = styled.img`
 export const Error = styled.h1`
   color: ${color.white};
 `;
-
-const Header = () => {
-  const { movies, error, loading } = useGetMovies();
-  const random = 1 + Math.floor(Math.random() * movies.length - 1);
-
-  return (
-    <HeaderBox>
-      {loading ? (
-        <CircularProgress />
-      ) : error ? (
-        <Error>There was a network error. Please try again.</Error>
-      ) : (
-        <>
-          <LeftSide>
-            <Title>{movies[random].title}</Title>
-            <SubTitle>{movies[random].description}</SubTitle>
-            <ButtonPosition>
-              <Button color={color.redRibbon}>Watch trailer</Button>
-              <Button color={color.shark}>
-                <Span>+</Span>Add to list
-              </Button>
-            </ButtonPosition>
-          </LeftSide>
-          <Image img={movies[random].image[0]}></Image>
-        </>
-      )}
-    </HeaderBox>
-  );
-};
 
 export default Header;

@@ -5,56 +5,6 @@ import Card from "./Card";
 import { useGetMovies } from "../hooks//useGetMovies";
 import { color } from "../styles/color";
 
-const RecentBox = styled.div`
-  background-color: ${color.ebony};
-  height: 864px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const CardPosition = styled.div`
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-`;
-
-const TitlePosition = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Title = styled.h1`
-  width: 256px;
-  height: 69px;
-  font-size: 18px;
-  line-height: 80px;
-  color: #fff;
-  margin-right: 797px;
-
-  span {
-    opacity: 0.5;
-  }
-`;
-
-const Button = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 32px;
-  height: 32px;
-  background-color: #f5044c;
-  color: #fff;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 8px;
-`;
-
 const Recent = () => {
   const [page, setPage] = useState(0);
   const [index, setIndex] = useState(4);
@@ -126,5 +76,55 @@ const Recent = () => {
     </RecentBox>
   );
 };
+
+const RecentBox = styled.div`
+  background-color: ${color.ebony};
+  height: 864px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const CardPosition = styled.div`
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const TitlePosition = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Title = styled.h1`
+  width: 256px;
+  height: 69px;
+  font-size: 18px;
+  line-height: 80px;
+  color: #fff;
+  margin-right: 797px;
+
+  span {
+    opacity: 0.5;
+  }
+`;
+
+const Button = styled.button`
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  background-color: #f5044c;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+`;
 
 export default Recent;

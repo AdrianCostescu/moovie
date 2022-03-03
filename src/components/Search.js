@@ -1,5 +1,22 @@
 import React from "react";
 
+const Search = () => {
+  return (
+    <SearchBox>
+      <SearchBar
+        placeholder="Search for a movie..."
+        type="text"
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
+      />
+      <AiOutlineSearch
+        style={{ fontSize: "25px", paddingRight: "24px" }}
+      ></AiOutlineSearch>
+    </SearchBox>
+  );
+};
+
 const SearchBox = styled.div`
   width: 368px;
   height: 56px;
@@ -26,22 +43,5 @@ const SearchBar = styled.input`
     font-weight: bold;
   }
 `;
-
-const Search = () => {
-  return (
-    <SearchBox>
-      <SearchBar
-        placeholder="Search for a movie..."
-        type="text"
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <AiOutlineSearch
-        style={{ fontSize: "25px", paddingRight: "24px" }}
-      ></AiOutlineSearch>
-    </SearchBox>
-  );
-};
 
 export default Search;

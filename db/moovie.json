@@ -302,13 +302,27 @@
         "Thriller"
       ],
       "id": 10
+    },
+    {
+      "title": "asdf",
+      "trailer": "asdfd",
+      "source": "saf",
+      "description": "dsaf",
+      "score": "5",
+      "release": "5",
+      "type": [
+        "Comedy"
+      ],
+      "image": [
+        "asdf"
+      ],
+      "id": 11
     }
   ],
   "users": [
     {
       "id": 1,
-      "firstName": "Adrian",
-      "lastName": "Costescu",
+      "name": "Adrian",
       "email": "",
       "password": "1234",
       "isAdmin": true,
@@ -319,8 +333,7 @@
     },
     {
       "id": 2,
-      "firstName": "Ion",
-      "lastName": "Tiriac",
+      "name": "Ion",
       "email": "",
       "password": "1234",
       "isAdmin": false,
@@ -328,6 +341,38 @@
         2,
         4
       ]
+    },
+    {
+      "name": "sadf",
+      "email": "fdsafsa@yahoo.com",
+      "password": "sdf",
+      "isAdmin": false,
+      "favoriteMoviesIds": [],
+      "id": 3
+    },
+    {
+      "name": "sadfasdf",
+      "email": "fdsafsa@yahoo.com",
+      "password": "dsfasdf",
+      "isAdmin": false,
+      "favoriteMoviesIds": [],
+      "id": 4
+    },
+    {
+      "name": "sadf",
+      "email": "costescuadrian@outlook.com",
+      "password": "32e",
+      "isAdmin": false,
+      "favoriteMoviesIds": [],
+      "id": 5
+    },
+    {
+      "name": "asdas",
+      "email": "costescuadrian@outlook.com",
+      "password": "asdf",
+      "isAdmin": false,
+      "favoriteMoviesIds": [],
+      "id": 6
     }
   ]
 }

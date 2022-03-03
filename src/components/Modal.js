@@ -56,7 +56,7 @@ const CloseButton = styled.button`
 
 const ModalPrimaryButton = styled.button`
   background-color: ${color.redRibbon};
-  padding: 12px 24px;
+  padding: 12px 63px;
   border-radius: 8px;
   border: none;
   margin: 0;
@@ -66,7 +66,7 @@ const ModalPrimaryButton = styled.button`
 const ModalSecondaryButton = styled.button`
   background-color: transparent;
   color: ${color.black};
-  padding: 12px 24px;
+  padding: 12px 63px;
   border-radius: 8px;
   margin: 0;
   border: 1px solid ${color.black};

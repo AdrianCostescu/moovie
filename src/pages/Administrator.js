@@ -9,23 +9,47 @@ import { AiOutlineSearch } from "react-icons/ai";
 import AddMovie from "../components/AddMovie";
 import NavbarAdmin from "../components/NavbarAdmin";
 import Modal from "../components/Modal";
+import Stack from "@mui/material/Stack";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 const Administrator = () => {
   const { movies, error, loading, refetch } = useGetMovies();
   const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [snackbar, setSnackbar] = useState(false);
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  const handleClose = (event, reason) => {
+    setSnackbar(false);
+  };
 
   return (
     <AdministratorBox>
+      <Stack spacing={2} sx={{ width: "100%" }}>
+        <Snackbar open={snackbar} autoHideDuration={6000} onClose={handleClose}>
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Movie add successful!
+          </Alert>
+        </Snackbar>
+      </Stack>
       <NavbarAdmin></NavbarAdmin>
-
       <Modal
         open={isAddMovieModalOpen}
         onClose={() => setIsAddMovieModalOpen(false)}
       >
-        <AddMovie handleCancel={() => setIsAddMovieModalOpen(false)}></AddMovie>
+        <AddMovie
+          handleCancel={() => setIsAddMovieModalOpen(false)}
+          setSnackbar={setSnackbar}
+          onSuccesAdd={refetch}
+        ></AddMovie>
       </Modal>
-
       <Filter>
         <SearchBox>
           <SearchBar

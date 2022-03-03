@@ -9,6 +9,105 @@ import { ErrorPosition } from "../pages/Favorite";
 import { Error } from "./Header";
 import CircularProgress from "@mui/material/CircularProgress";
 
+
+
+const Content = () => {
+  const [type, setType] = useState("Adventure");
+
+  const { movies, error, loading } = useGetMovies();
+
+  const HandleChange = (e) => {
+    setType(e.target.value);
+  };
+
+  const filteredMovies = useMemo(() => {
+    return movies.filter((movie) => movie.type.includes(type));
+  }, [movies, type]);
+
+  return (
+    <ContentBox>
+      <HeaderBox>
+        <Title>See what movies are coming next month</Title>
+        <FilterBox>
+          <Text>Filter by</Text>
+          <FormControl
+            sx={{
+              width: 158,
+              height: 40,
+              backgroundColor: "#f5044c",
+              borderRadius: 2,
+              color: "#fff",
+              display: "flex",
+            }}
+          >
+            <Select
+              sx={{
+                width: 158,
+                height: 40,
+                color: "#fff",
+                fontSize: 18,
+              }}
+              defaultValue={type}
+              value={type}
+              onChange={HandleChange}
+            >
+              <MenuItem value="Adventure">Adventure</MenuItem>
+              <MenuItem value="Action">Action</MenuItem>
+              <MenuItem value="Drama">Drama</MenuItem>
+              <MenuItem value="Crime">Crime</MenuItem>
+              <MenuItem value="Comedy">Comedy</MenuItem>
+              <MenuItem value="Thriller">Thriller</MenuItem>
+              <MenuItem value="Fantasy">Fantasy</MenuItem>
+              <MenuItem value="Horror">Horror</MenuItem>
+              <MenuItem value="Mystery">Mystery</MenuItem>
+              <MenuItem value="Family">Family</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl sx={{ marginLeft: "16px" }}>
+            <Select
+              sx={{
+                backgroundColor: "#f5044c",
+                width: 158,
+                height: 40,
+                color: "#fff",
+                fontSize: 18,
+              }}
+            >
+              <MenuItem value="Adventure">Adventure</MenuItem>
+            </Select>
+          </FormControl>
+        </FilterBox>
+      </HeaderBox>
+      {loading ? (
+        <ErrorPosition>
+          <CircularProgress />
+        </ErrorPosition>
+      ) : error ? (
+        <ErrorPosition>
+          <Error>There was a network error. Please try again.</Error>
+        </ErrorPosition>
+      ) : (
+        <CardPosition>
+          {filteredMovies.length &&
+            filteredMovies.map((movie) => {
+              return (
+                <Card
+                  key={movie.id}
+                  id={movie.id}
+                  title={movie.title}
+                  type={movie.type}
+                  score={movie.score}
+                  img={movie.image[0]}
+                  release={movie.release}
+                ></Card>
+              );
+            })}
+        </CardPosition>
+      )}
+    </ContentBox>
+  );
+};
+
 const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -56,84 +155,5 @@ const CardPosition = styled.div`
   gap: 28px 16px;
   flex-wrap: wrap;
 `;
-
-const Content = () => {
-  const [type, setType] = useState("Adventure");
-
-  const { movies, error, loading } = useGetMovies();
-
-  const HandleChange = (e) => {
-    setType(e.target.value);
-  };
-
-  const filteredMovies = useMemo(() => {
-    return movies.filter((movie) => movie.type.includes(type));
-  }, [movies, type]);
-
-  return (
-    <ContentBox>
-      <HeaderBox>
-        <Title>See what movies are coming next month</Title>
-        <FilterBox>
-          <Text>Filter by</Text>
-          <FormControl
-            sx={{
-              width: 158,
-              height: 40,
-              backgroundColor: "#f5044c",
-              borderRadius: 2,
-              color: "#fff",
-            }}
-          >
-            <Select
-              sx={{
-                width: 158,
-                height: 40,
-                color: "#fff",
-                fontSize: 18,
-              }}
-              defaultValue={type}
-              value={type}
-              onChange={HandleChange}
-            >
-              <MenuItem value="Adventure">Adventure</MenuItem>
-              <MenuItem value="Action">Action</MenuItem>
-              <MenuItem value="Comedy">Comedy</MenuItem>
-              <MenuItem value="Thriller">Thriller</MenuItem>
-              <MenuItem value="Romance">Romance</MenuItem>
-              <MenuItem value="Musical">Musical</MenuItem>
-            </Select>
-          </FormControl>
-        </FilterBox>
-      </HeaderBox>
-      {loading ? (
-        <ErrorPosition>
-          <CircularProgress />
-        </ErrorPosition>
-      ) : error ? (
-        <ErrorPosition>
-          <Error>There was a network error. Please try again.</Error>
-        </ErrorPosition>
-      ) : (
-        <CardPosition>
-          {filteredMovies.length &&
-            filteredMovies.map((movie) => {
-              return (
-                <Card
-                  key={movie.id}
-                  id={movie.id}
-                  title={movie.title}
-                  type={movie.type}
-                  score={movie.score}
-                  img={movie.image[0]}
-                  release={movie.release}
-                ></Card>
-              );
-            })}
-        </CardPosition>
-      )}
-    </ContentBox>
-  );
-};
 
 export default Content;

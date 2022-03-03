@@ -6,6 +6,50 @@ import facebook from "../img/Vector.png";
 import twiter from "../img/Vector2.png";
 import youtube from "../img/Vector3.png";
 
+const Footer = () => {
+  return (
+    <FooterBox>
+      <FooterMain>
+        <Logo src={logo}></Logo>
+        <TextAlign>
+          <TextAlignColumn>
+            <Text>Press Room</Text>
+            <Text>Advertising</Text>
+            <Text>Jobs</Text>
+          </TextAlignColumn>
+          <TextAlignColumn>
+            <Text>Contact Us</Text>
+            <Text>
+              <Link to="/register">Register</Link>
+            </Text>
+            <Text>News</Text>
+          </TextAlignColumn>
+          <TextAlignColumn>
+            <Text>Conditions of Use</Text>
+            <Text>Privacy Policy</Text>
+            <Text>Interest-Based Ads</Text>
+          </TextAlignColumn>
+        </TextAlign>
+      </FooterMain>
+      <SecondBox>
+        <TextL>Copyright © 1990-2019 Moovie.com, Inc.</TextL>
+        <Icons>
+          <Text>Follow us on social media</Text>
+          <BackgrounIcon>
+            <Icon src={facebook} />
+          </BackgrounIcon>
+          <BackgrounIcon>
+            <Icon src={twiter} />
+          </BackgrounIcon>
+          <BackgrounIcon>
+            <Icon src={youtube} />
+          </BackgrounIcon>
+        </Icons>
+      </SecondBox>
+    </FooterBox>
+  );
+};
+
 const FooterBox = styled.div`
   height: 352px;
   width: 100%;
@@ -84,49 +128,5 @@ const BackgrounIcon = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-const Footer = () => {
-  return (
-    <FooterBox>
-      <FooterMain>
-        <Logo src={logo}></Logo>
-        <TextAlign>
-          <TextAlignColumn>
-            <Text>Press Room</Text>
-            <Text>Advertising</Text>
-            <Text>Jobs</Text>
-          </TextAlignColumn>
-          <TextAlignColumn>
-            <Text>Contact Us</Text>
-            <Text>
-              <Link to="/register">Register</Link>
-            </Text>
-            <Text>News</Text>
-          </TextAlignColumn>
-          <TextAlignColumn>
-            <Text>Conditions of Use</Text>
-            <Text>Privacy Policy</Text>
-            <Text>Interest-Based Ads</Text>
-          </TextAlignColumn>
-        </TextAlign>
-      </FooterMain>
-      <SecondBox>
-        <TextL>Copyright © 1990-2019 Moovie.com, Inc.</TextL>
-        <Icons>
-          <Text>Follow us on social media</Text>
-          <BackgrounIcon>
-            <Icon src={facebook} />
-          </BackgrounIcon>
-          <BackgrounIcon>
-            <Icon src={twiter} />
-          </BackgrounIcon>
-          <BackgrounIcon>
-            <Icon src={youtube} />
-          </BackgrounIcon>
-        </Icons>
-      </SecondBox>
-    </FooterBox>
-  );
-};
 
 export default Footer;

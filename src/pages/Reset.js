@@ -3,6 +3,25 @@ import { Logo, Form, Input } from "./Register";
 import logo from "../img/moovie-watchers_logo.png";
 import styled from "styled-components";
 
+const Reset = () => {
+  return (
+    <RegisterPage>
+      <Logo src={logo} alt="logo"></Logo>
+      <ContentBox>
+        <Title>Reset password</Title>
+        <SubText>
+          We will send you over email the instructions in order to get your
+          password reseted.
+        </SubText>
+        <Form>
+          <Input type="email" placeholder="Email adress"></Input>
+          <Button>Reset password</Button>
+        </Form>
+      </ContentBox>
+    </RegisterPage>
+  );
+};
+
 const SubText = styled.p`
   width: 346px;
   height: 40px;
@@ -55,24 +74,5 @@ const Button = styled.button`
   line-height: 25px;
   color: #fff;
 `;
-
-const Reset = () => {
-  return (
-    <RegisterPage>
-      <Logo src={logo} alt="logo"></Logo>
-      <ContentBox>
-        <Title>Reset password</Title>
-        <SubText>
-          We will send you over email the instructions in order to get your
-          password reseted.
-        </SubText>
-        <Form>
-          <Input type="email" placeholder="Email adress"></Input>
-          <Button>Reset password</Button>
-        </Form>
-      </ContentBox>
-    </RegisterPage>
-  );
-};
 
 export default Reset;

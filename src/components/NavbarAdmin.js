@@ -8,42 +8,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { IoIosArrowDown } from "react-icons/io";
 
-const NavbarBox = styled.div`
-  height: 118px;
-  width: 100%;
-  background-color: ${color.ebony};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const Logo = styled.img`
-  height: 40px;
-  margin-left: 152px;
-`;
-
-const Icon = styled.img`
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: ${color.white};
-  border: 2px solid #f5044c;
-  margin-right: 16px;
-`;
-
-const RightPosition = styled.div`
-  display: flex;
-  margin-right: 152px;
-`;
-
-const Name = styled.h1`
-  font-size: 16px;
-  line-height: 22px;
-  color: ${color.white};
-  opacity: 0.4;
-  margin-right: 5px;
-`;
-
 const NavbarAdmin = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -53,8 +17,6 @@ const NavbarAdmin = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  console.log(open);
 
   return (
     <NavbarBox>
@@ -98,5 +60,41 @@ const NavbarAdmin = () => {
     </NavbarBox>
   );
 };
+
+const NavbarBox = styled.div`
+  height: 118px;
+  width: 100%;
+  background-color: ${color.ebony};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Logo = styled.img`
+  height: 40px;
+  margin-left: 152px;
+`;
+
+const Icon = styled.img`
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: ${color.white};
+  border: 2px solid #f5044c;
+  margin-right: 16px;
+`;
+
+const RightPosition = styled.div`
+  display: flex;
+  margin-right: 152px;
+`;
+
+const Name = styled.h1`
+  font-size: 16px;
+  line-height: 22px;
+  color: ${color.white};
+  opacity: 0.4;
+  margin-right: 5px;
+`;
 
 export default NavbarAdmin;

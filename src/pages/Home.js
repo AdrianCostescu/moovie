@@ -5,9 +5,7 @@ import Content from "../components/Content";
 import { Main } from "../components/Main";
 import Header from "../components/Header";
 
-const HomePage = styled.div`
-  
-`;
+const HomePage = styled.div``;
 
 function Home() {
   return (

@@ -13,22 +13,6 @@ import logo from "../img/moovie-watchers_logo.png";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Reset = styled.p`
-  width: 368px;
-  height: 30px;
-  color: #9c9b9b;
-  font-size: 14px;
-  line-height: 80px;
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-
-  a {
-    color: #9c9b9b;
-    text-decoration: none;
-  }
-`;
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -65,5 +49,21 @@ const Login = () => {
     </RegisterPage>
   );
 };
+
+const Reset = styled.p`
+  width: 368px;
+  height: 30px;
+  color: #9c9b9b;
+  font-size: 14px;
+  line-height: 80px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+
+  a {
+    color: #9c9b9b;
+    text-decoration: none;
+  }
+`;
 
 export default Login;

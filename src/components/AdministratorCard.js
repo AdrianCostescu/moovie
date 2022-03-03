@@ -27,6 +27,7 @@ const AdministratorCard = ({ img, title, data, type, id, onDeleteSuccess }) => {
       return error;
     });
   }
+
   useEffect(() => {
     if (response?.data?.deleteMovieById) {
       setIsDeleteModalOpen(false);
@@ -49,17 +50,19 @@ const AdministratorCard = ({ img, title, data, type, id, onDeleteSuccess }) => {
         open={isDeleteModalOpen}
         onClose={() => setIsDeleteModalOpen(false)}
       >
-        <StyledModalContent maxWidth="400px">
+        <StyledModalContent maxWidth="387px">
           <ModalCloseButton onClose={() => setIsDeleteModalOpen(false)} />
           <ModalTitle>Are you sure you want to delete this movie?</ModalTitle>
 
-          <ModalSecondaryButton onClick={() => setIsDeleteModalOpen(false)}>
-            Cancel
-          </ModalSecondaryButton>
+          <ButtonPosition>
+            <ModalSecondaryButton onClick={() => setIsDeleteModalOpen(false)}>
+              Cancel
+            </ModalSecondaryButton>
 
-          <ModalPrimaryButton onClick={() => handleDeleteMovie()}>
-            Confirm
-          </ModalPrimaryButton>
+            <ModalPrimaryButton onClick={() => handleDeleteMovie()}>
+              Delete
+            </ModalPrimaryButton>
+          </ButtonPosition>
         </StyledModalContent>
       </Modal>
     </>
@@ -130,6 +133,12 @@ const Icon = styled.img`
 
 const StyledModalContent = styled(ModalContent)`
   padding: 104px 182px;
+`;
+
+const ButtonPosition = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
 `;
 
 export default AdministratorCard;

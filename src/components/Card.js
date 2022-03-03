@@ -2,6 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const Card = ({ title, type, score, img, release, id }) => {
+  return (
+    <CardBox>
+      <Link to={"/movies/" + id}>
+        <ImgBox img={img}></ImgBox>
+      </Link>
+      <ButtonPosition>
+        <ButtonWatch>Add to watchlist</ButtonWatch>
+        <Nota>{score}</Nota>
+      </ButtonPosition>
+      <Link to={"/movies/" + id}>
+        <Title>{title}</Title>
+        <SubTitle>
+          Realeased date: {release} {type?.join(" • ")}
+        </SubTitle>
+      </Link>
+    </CardBox>
+  );
+};
+
 const CardBox = styled.div`
   height: auto;
 `;
@@ -48,8 +68,8 @@ const ButtonPosition = styled.div`
   display: flex;
   align-items: center;
   gap: 7px;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  margin-left: 103px;
+  margin-top: -56px;
 `;
 
 const Title = styled.h1`
@@ -60,6 +80,7 @@ const Title = styled.h1`
   color: #fff;
   display: flex;
   align-items: center;
+  margin-top: 24px;
 `;
 
 const SubTitle = styled.p`
@@ -69,25 +90,7 @@ const SubTitle = styled.p`
   opacity: 0.5;
   color: #fff;
   margin-top: -15px;
+  text-decoration: none;
 `;
-
-const Card = ({ title, type, score, img, release, id }) => {
-  return (
-    <CardBox>
-      <ImgBox img={img}>
-        <ButtonPosition>
-          <ButtonWatch>Add to watchlist</ButtonWatch>
-          <Nota>{score}</Nota>
-        </ButtonPosition>
-      </ImgBox>
-      <Link to={"/movies/" + id}>
-        <Title>{title}</Title>
-        <SubTitle>
-          Realeased date: {release} {type?.join(" • ")}
-        </SubTitle>
-      </Link>
-    </CardBox>
-  );
-};
 
 export default Card;

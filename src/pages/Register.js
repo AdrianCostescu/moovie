@@ -2,6 +2,93 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../img/moovie-watchers_logo.png";
+import { useRegisterUser } from "../hooks/useRegisterUser";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const Register = () => {
+  const [open, setOpen] = useState(false);
+  const [addUser] = useRegisterUser();
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [favoriteMoviesIds, setFavoriteMoviesIds] = useState([]);
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const input = Object.fromEntries(formData);
+
+    const response = await addUser({
+      variables: {
+        input: {
+          ...input,
+          isAdmin: isAdmin,
+          favoriteMoviesIds: favoriteMoviesIds,
+        },
+      },
+    })
+      .catch((error) => {
+        console.log(error);
+        return error;
+      })
+      .then(handleClick);
+  }
+
+  return (
+    <RegisterPage>
+      <Logo src={logo} alt="logo"></Logo>
+      <ContentBox>
+        <Title>Let's create your account</Title>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            name="name"
+            type="text"
+            placeholder="Full name"
+            required
+          ></Input>
+          <Input
+            name="email"
+            type="email"
+            placeholder="Email adress"
+            required
+          ></Input>
+          <Input
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+          ></Input>
+          <Button type="submit">Register</Button>
+          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              sx={{ width: "100%" }}
+            >
+              User successfully created
+            </Alert>
+          </Snackbar>
+        </Form>
+        <Text>
+          Already have an account? <Link to="/login">Log in</Link>
+        </Text>
+      </ContentBox>
+    </RegisterPage>
+  );
+};
 
 export const RegisterPage = styled.div`
   background-color: #010103;
@@ -82,6 +169,7 @@ export const Button = styled.button`
   font-size: 18px;
   line-height: 25px;
   color: #fff;
+  cursor: pointer;
 `;
 
 export const Text = styled.p`
@@ -93,47 +181,5 @@ export const Text = styled.p`
     color: #9c9b9b;
   }
 `;
-
-const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  return (
-    <RegisterPage>
-      <Logo src={logo} alt="logo"></Logo>
-      <ContentBox>
-        <Title>Let's create your account</Title>
-        <Form>
-          <Input
-            type="text"
-            placeholder="Full name"
-            required
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></Input>
-          <Input
-            type="email"
-            placeholder="Email adress"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></Input>
-          <Input
-            type="password"
-            placeholder="Password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></Input>
-        </Form>
-        <Button>Register</Button>
-        <Text>
-          Already have an account? <Link to="/login">Log in</Link>
-        </Text>
-      </ContentBox>
-    </RegisterPage>
-  );
-};
 
 export default Register;

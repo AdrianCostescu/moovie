@@ -3,6 +3,56 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../img/moovie-watchers_logo.png";
 import { Badge } from "./Badge";
+import NavbarMobile from "./NavbarMobile";
+
+const Navbar = () => {
+  return (
+    <>
+      <NavbarBox>
+        <NavbarVisibilityMain>
+          <ListMenu>
+            <Text>
+              <Link to="/">Home</Link>
+            </Text>
+            <Text>Categories</Text>
+          </ListMenu>
+        </NavbarVisibilityMain>
+
+        <Logo src={logo} alt="logo" />
+
+        <NavbarVisibilityMain>
+          <ListMenu>
+            <Badge count={3}>
+              <Text>
+                <Link to="/favorite">Watchlist</Link>
+              </Text>
+            </Badge>
+            <Text>Contact</Text>
+          </ListMenu>
+        </NavbarVisibilityMain>
+      </NavbarBox>
+
+      <NavbarVisibility>
+        <NavbarMobile />
+      </NavbarVisibility>
+    </>
+  );
+};
+
+const NavbarVisibility = styled.div`
+  visibility: hidden;
+  @media only screen and (max-width: 850px) {
+    visibility: visible;
+  }
+`;
+
+const NavbarVisibilityMain = styled.div`
+  visibility: visible;
+  @media only screen and (max-width: 850px) {
+    // visibility: hidden;
+    display: none;
+  }
+`;
 
 const NavbarBox = styled.div`
   height: 144px;
@@ -11,6 +61,10 @@ const NavbarBox = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #fff;
+
+  @media only screen and (max-width: 850px) {
+    justify-content: center;
+  }
 `;
 
 const ListMenu = styled.div`
@@ -35,27 +89,5 @@ const Text = styled.p`
     text-decoration: none;
   }
 `;
-
-const Navbar = () => {
-  return (
-    <NavbarBox>
-      <ListMenu>
-        <Text>
-          <Link to="/">Home</Link>
-        </Text>
-        <Text>Categories</Text>
-      </ListMenu>
-      <Logo src={logo} alt="logo" />
-      <ListMenu>
-        <Badge count={3}>
-          <Text>
-            <Link to="/favorite">Watchlist</Link>
-          </Text>
-        </Badge>
-        <Text>Contact</Text>
-      </ListMenu>
-    </NavbarBox>
-  );
-};
 
 export default Navbar;

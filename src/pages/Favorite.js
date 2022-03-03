@@ -14,74 +14,6 @@ import { FilterBox, Text } from "../components/Content";
 import { Error } from "../components/Header";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const FavoriteBox = styled.div`
-  background-color: ${color.ebony};
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Title = styled.div`
-  width: 560px;
-  height: 120px;
-  color: #fff;
-  font-size: 48px;
-  line-height: 60px;
-  margin-top: 100px;
-  margin-left: 152px;
-`;
-
-const SearchBox = styled.div`
-  width: 368px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  background-color: ${color.shark};
-`;
-
-const SearchBar = styled.input`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 320px;
-  height: 56px;
-  background-color: ${color.shark};
-  border-radius: 5px;
-  color: white;
-  padding-left: 24px;
-
-  ::placeholder {
-    color: white;
-    line-height: 22px;
-    font-weight: bold;
-  }
-`;
-
-const Filter = styled.div`
-  display: flex;
-  margin-top: 80px;
-  margin-left: 152px;
-  margin-right: 152px;
-  justify-content: space-between;
-`;
-
-const CardPosition = styled.div`
-  display: flex;
-  gap: 16px;
-  margin-left: 152px;
-  margin-right: 152px;
-  margin-top: 51px;
-  margin-bottom: 291px;
-`;
-
-export const ErrorPosition = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
-`;
-
 const Favorite = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { user, error, loading } = useGetUserById({ id: 1 });
@@ -90,8 +22,6 @@ const Favorite = () => {
     error: getMoviesError,
     loading: isGetMoviesLoading,
   } = useGetMovies();
-
-  console.log(user);
 
   const hasMovie = Boolean(movies);
 
@@ -197,5 +127,73 @@ const Favorite = () => {
     </Main>
   );
 };
+
+const FavoriteBox = styled.div`
+  background-color: ${color.ebony};
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Title = styled.div`
+  width: 560px;
+  height: 120px;
+  color: #fff;
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 100px;
+  margin-left: 152px;
+`;
+
+const SearchBox = styled.div`
+  width: 368px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background-color: ${color.shark};
+`;
+
+const SearchBar = styled.input`
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  width: 320px;
+  height: 56px;
+  background-color: ${color.shark};
+  border-radius: 5px;
+  color: white;
+  padding-left: 24px;
+
+  ::placeholder {
+    color: white;
+    line-height: 22px;
+    font-weight: bold;
+  }
+`;
+
+const Filter = styled.div`
+  display: flex;
+  margin-top: 80px;
+  margin-left: 152px;
+  margin-right: 152px;
+  justify-content: space-between;
+`;
+
+const CardPosition = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-left: 152px;
+  margin-right: 152px;
+  margin-top: 51px;
+  margin-bottom: 291px;
+`;
+
+export const ErrorPosition = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+`;
 
 export default Favorite;
