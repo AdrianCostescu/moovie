@@ -13,29 +13,35 @@ import Stack from "@mui/material/Stack";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 
+const SNACKBAR_DURATION = 6000;
+
 const Administrator = () => {
   const { movies, error, loading, refetch } = useGetMovies();
   const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [snackbar, setSnackbar] = useState(false);
+  const [hasMovieBeenAdded, setHasMovieBeenAdded] = useState(false);
 
   const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
   const handleClose = (event, reason) => {
-    setSnackbar(false);
+    setHasMovieBeenAdded(false);
   };
 
   return (
     <AdministratorBox>
       <Stack spacing={2} sx={{ width: "100%" }}>
-        <Snackbar open={snackbar} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar
+          open={hasMovieBeenAdded}
+          autoHideDuration={SNACKBAR_DURATION}
+          onClose={handleClose}
+        >
           <Alert
             onClose={handleClose}
             severity="success"
             sx={{ width: "100%" }}
           >
-            Movie add successful!
+            Movie has been added.
           </Alert>
         </Snackbar>
       </Stack>
@@ -46,8 +52,10 @@ const Administrator = () => {
       >
         <AddMovie
           handleCancel={() => setIsAddMovieModalOpen(false)}
-          setSnackbar={setSnackbar}
-          onSuccesAdd={refetch}
+          onSuccesAdd={() => {
+            setHasMovieBeenAdded(true);
+            refetch();
+          }}
         ></AddMovie>
       </Modal>
       <Filter>

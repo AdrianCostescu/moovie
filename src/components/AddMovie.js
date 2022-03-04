@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { color } from "../styles/color";
 import styled from "styled-components";
 import { usePostVideoMutation } from "../hooks/usePostVideoMutation";
@@ -20,19 +20,10 @@ const CATEGORIES = [
   "Family",
 ];
 
-const AddMovie = ({ handleCancel, setSnackbar, onSuccesAdd }) => {
+const AddMovie = ({ handleCancel, onSuccesAdd }) => {
   const [types, setTypes] = useState([]);
   const [images, setImage] = useState([]);
-  const [addMovie, data] = usePostVideoMutation();
-
-  console.log(data);
-
-  useEffect(() => {
-    if (data.data?.postVideo) {
-      setSnackbar(true);
-      onSuccesAdd();
-    }
-  }, [data]);
+  const [addMovie, response] = usePostVideoMutation();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -49,7 +40,13 @@ const AddMovie = ({ handleCancel, setSnackbar, onSuccesAdd }) => {
         console.error(error);
         return error;
       })
-      .then(handleCancel);
+      .then((response) => {
+        if (response.data.postVideo) {
+          onSuccesAdd();
+        }
+
+        handleCancel();
+      });
   }
 
   function handleTypeChange({ target: { value } }) {
