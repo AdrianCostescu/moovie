@@ -3,35 +3,59 @@ import styled from "styled-components";
 import { color } from "../styles/color";
 import { useGetMovies } from "../hooks/useGetMovies";
 import CircularProgress from "@mui/material/CircularProgress";
-
+import HeaderMobile from "./HeaderMobile";
 const Header = () => {
   const { movies, error, loading } = useGetMovies();
   const random = 1 + Math.floor(Math.random() * movies.length - 1);
-
   return (
-    <HeaderBox>
-      {loading ? (
-        <CircularProgress />
-      ) : error ? (
-        <Error>There was a network error. Please try again.</Error>
-      ) : (
-        <>
-          <LeftSide>
-            <Title>{movies[random].title}</Title>
-            <SubTitle>{movies[random].description}</SubTitle>
-            <ButtonPosition>
-              <Button color={color.redRibbon}>Watch trailer</Button>
-              <Button color={color.shark}>
-                <Span>+</Span>Add to list
-              </Button>
-            </ButtonPosition>
-          </LeftSide>
-          <Image img={movies[random].image[0]}></Image>
-        </>
-      )}
-    </HeaderBox>
+    <>
+      <Show>
+        <HeaderBox>
+          {loading ? (
+            <CircularProgress />
+          ) : error ? (
+            <Error>There was a network error. Please try again.</Error>
+          ) : (
+            <>
+              <LeftSide>
+                <Title>{movies[random].title}</Title>
+                <SubTitle>{movies[random].description}</SubTitle>
+                <ButtonPosition>
+                  <Button color={color.redRibbon}>Watch trailer</Button>
+                  <Button color={color.shark}>
+                    <Span>+</Span>Add to list
+                  </Button>
+                </ButtonPosition>
+              </LeftSide>
+              <Image img={movies[random].image[0]}></Image>
+            </>
+          )}
+        </HeaderBox>
+      </Show>
+      <ShowMobile>
+        <HeaderMobile
+          loading={loading}
+          error={error}
+          movies={movies}
+          random={random}
+        />
+      </ShowMobile>
+    </>
   );
 };
+
+const Show = styled.div`
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
+`;
+
+const ShowMobile = styled.div`
+  display: none;
+  @media only screen and (max-width: 850px) {
+    display: block;
+  }
+`;
 
 const HeaderBox = styled.div`
   background-color: ${color.ebony};

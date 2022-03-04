@@ -11,6 +11,7 @@ const GET_MOVIES = gql`
       image
       release
       description
+      time
     }
   }
 `;

@@ -4,6 +4,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Card from "./Card";
 import { useGetMovies } from "../hooks//useGetMovies";
 import { color } from "../styles/color";
+import RecentMobile from "./RecentMobile";
 
 const Recent = () => {
   const [page, setPage] = useState(0);
@@ -37,45 +38,63 @@ const Recent = () => {
   };
 
   const { movies, error, loading } = useGetMovies();
-
   const hasError = Boolean(error);
-
   return (
-    <RecentBox>
-      <TitlePosition>
-        <Title>
-          Recent added movies <span>({index}/10)</span>
-        </Title>
-        <Button onClick={handleClickDown}>&#x2329;</Button>
-        <Button onClick={handleClick}>&#x232A;</Button>
-      </TitlePosition>
-      {loading ? (
-        <CircularProgress
-          sx={{ position: "absolute", top: "50%", right: "50%" }}
-        />
-      ) : hasError ? (
-        <h1>There was a network error. Please try again.</h1>
-      ) : (
-        <CardPosition>
-          {movies.length &&
-            movies.slice(page, index).map((movie) => {
-              return (
-                <Card
-                  key={movie.id}
-                  id={movie.id}
-                  title={movie.title}
-                  type={movie.type}
-                  score={movie.score}
-                  img={movie.image[0]}
-                  release={movie.release}
-                ></Card>
-              );
-            })}
-        </CardPosition>
-      )}
-    </RecentBox>
+    <>
+      <Show>
+        <RecentBox>
+          <TitlePosition>
+            <Title>
+              Recent added movies <span>({index}/10)</span>
+            </Title>
+            <Button onClick={handleClickDown}>&#x2329;</Button>
+            <Button onClick={handleClick}>&#x232A;</Button>
+          </TitlePosition>
+          {loading ? (
+            <CircularProgress
+              sx={{ position: "absolute", top: "50%", right: "50%" }}
+            />
+          ) : hasError ? (
+            <h1>There was a network error. Please try again.</h1>
+          ) : (
+            <CardPosition>
+              {movies.length &&
+                movies.slice(page, index).map((movie) => {
+                  return (
+                    <Card
+                      key={movie.id}
+                      id={movie.id}
+                      title={movie.title}
+                      type={movie.type}
+                      score={movie.score}
+                      img={movie.image[0]}
+                      release={movie.release}
+                    ></Card>
+                  );
+                })}
+            </CardPosition>
+          )}
+        </RecentBox>
+      </Show>
+      <ShowMobile>
+        <RecentMobile />
+      </ShowMobile>
+    </>
   );
 };
+
+const Show = styled.div`
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
+`;
+
+const ShowMobile = styled.div`
+  display: none;
+  @media only screen and (max-width: 850px) {
+    display: block;
+  }
+`;
 
 const RecentBox = styled.div`
   background-color: ${color.ebony};

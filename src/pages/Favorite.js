@@ -13,6 +13,7 @@ import Select from "@mui/material/Select";
 import { FilterBox, Text } from "../components/Content";
 import { Error } from "../components/Header";
 import CircularProgress from "@mui/material/CircularProgress";
+import FavoriteMobile from "../components/FavoriteMobile";
 
 const Favorite = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,99 +35,124 @@ const Favorite = () => {
   }, [favoriteMoviesIds, movies]);
 
   return (
-    <Main>
-      <FavoriteBox>
-        <Title>Welcome to your Watchlist page.</Title>
-        <Filter>
-          <SearchBox>
-            <SearchBar
-              placeholder="Search for a movie..."
-              type="text"
-              onChange={(event) => {
-                setSearchTerm(event.target.value);
-              }}
-            />
-            <AiOutlineSearch
-              style={{ fontSize: "25px", paddingRight: "24px" }}
-            ></AiOutlineSearch>
-          </SearchBox>
-          <FilterBox>
-            <Text>Sort by</Text>
-            <FormControl
-              sx={{
-                width: 186,
-                height: 56,
-                borderRadius: 2,
-                border: "1px solid #F5044C",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Select
-                sx={{
-                  width: 158,
-                  height: 40,
-                  color: "#F5044C",
-                  fontSize: 18,
-                }}
-                defaultValue="Latest Added"
-              >
-                <MenuItem value="Latest Added">Latest Added</MenuItem>
-                <MenuItem value="Action">Action</MenuItem>
-              </Select>
-              <IoIosArrowDown
-                style={{
-                  fontSize: "25px",
-                  paddingRight: "15px",
-                  color: "#F5044C",
-                }}
-              ></IoIosArrowDown>
-            </FormControl>
-          </FilterBox>
-        </Filter>
-        {isGetMoviesLoading ? (
-          <ErrorPosition>
-            <CircularProgress />
-          </ErrorPosition>
-        ) : !hasMovie ? (
-          <ErrorPosition>
-            <Error>There was a network error. Please try again.</Error>
-          </ErrorPosition>
-        ) : (
-          <CardPosition>
-            {filteredMovies
-              .filter((val) => {
-                if (searchTerm === "") {
-                  return val;
-                } else if (
-                  val.title
-                    .toLowerCase()
-                    .includes(searchTerm.toLocaleLowerCase())
-                ) {
-                  return val;
-                }
-              })
-              .map((movie) => {
-                return (
-                  <Card
-                    key={movie.id}
-                    id={movie.id}
-                    title={movie.title}
-                    type={movie.type}
-                    score={movie.score}
-                    img={movie.image[0]}
-                    release={movie.release}
-                  ></Card>
-                );
-              })}
-          </CardPosition>
-        )}
-      </FavoriteBox>
-    </Main>
+    <>
+      <Show>
+        <Main>
+          <FavoriteBox>
+            <Title>Welcome to your Watchlist page.</Title>
+            <Filter>
+              <SearchBox>
+                <SearchBar
+                  placeholder="Search for a movie..."
+                  type="text"
+                  onChange={(event) => {
+                    setSearchTerm(event.target.value);
+                  }}
+                />
+                <AiOutlineSearch
+                  style={{ fontSize: "25px", paddingRight: "24px" }}
+                ></AiOutlineSearch>
+              </SearchBox>
+              <FilterBox>
+                <Text>Sort by</Text>
+                <FormControl
+                  sx={{
+                    width: 186,
+                    height: 56,
+                    borderRadius: 2,
+                    border: "1px solid #F5044C",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Select
+                    sx={{
+                      width: 158,
+                      height: 40,
+                      color: "#F5044C",
+                      fontSize: 18,
+                    }}
+                    defaultValue="Latest Added"
+                  >
+                    <MenuItem value="Latest Added">Latest Added</MenuItem>
+                    <MenuItem value="Action">Action</MenuItem>
+                  </Select>
+                  <IoIosArrowDown
+                    style={{
+                      fontSize: "25px",
+                      paddingRight: "15px",
+                      color: "#F5044C",
+                    }}
+                  ></IoIosArrowDown>
+                </FormControl>
+              </FilterBox>
+            </Filter>
+            {isGetMoviesLoading ? (
+              <ErrorPosition>
+                <CircularProgress />
+              </ErrorPosition>
+            ) : !hasMovie ? (
+              <ErrorPosition>
+                <Error>There was a network error. Please try again.</Error>
+              </ErrorPosition>
+            ) : (
+              <CardPosition>
+                {filteredMovies
+                  .filter((val) => {
+                    if (searchTerm === "") {
+                      return val;
+                    } else if (
+                      val.title
+                        .toLowerCase()
+                        .includes(searchTerm.toLocaleLowerCase())
+                    ) {
+                      return val;
+                    }
+                  })
+                  .map((movie) => {
+                    return (
+                      <Card
+                        key={movie.id}
+                        id={movie.id}
+                        title={movie.title}
+                        type={movie.type}
+                        score={movie.score}
+                        img={movie.image[0]}
+                        release={movie.release}
+                      ></Card>
+                    );
+                  })}
+              </CardPosition>
+            )}
+          </FavoriteBox>
+        </Main>
+      </Show>
+      <ShowMobile>
+        <FavoriteMobile
+          user={user}
+          movies={movies}
+          error={error}
+          loading={loading}
+        ></FavoriteMobile>
+      </ShowMobile>
+    </>
   );
 };
+
+const Show = styled.div`
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
+`;
+
+const ShowMobile = styled.div`
+  display: none;
+  @media only screen and (max-width: 850px) {
+    display: block;
+  }
+`;
 
 const FavoriteBox = styled.div`
   background-color: ${color.ebony};

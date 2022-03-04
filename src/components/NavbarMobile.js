@@ -1,59 +1,72 @@
-import React from "react";
-import styled from "styled-components";
-import { color } from "../styles/color";
-import home from "../img/home.png";
-import favorite from "../img/favorite.png";
-import search from "../img/search.png";
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import BookmarkAddOutlinedIcon from "@mui/icons-material/BookmarkAddOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import { Link } from "react-router-dom";
 
 const NavbarMobile = () => {
+  const [value, setValue] = useState(0);
+
   return (
-    <NavbarM>
-      <IconPosition>
-        <Icon src={home}></Icon>
-        <Title>Home</Title>
-      </IconPosition>
-      <IconPosition>
-        <Icon src={favorite}></Icon>
-        <Title>Watchlist</Title>
-      </IconPosition>
-      <IconPosition>
-        <Icon src={search}></Icon>
-        <Title>Search</Title>
-      </IconPosition>
-    </NavbarM>
+    <Box
+      sx={{
+        width: "auto",
+        "& .MuiBottomNavigation-root": {
+          backgroundColor: "#F5044C",
+          boxShadow: "0px -0.5px 0px rgba(0, 0, 0, 0.3)",
+          backdropFilter: "blur(27.1828px)",
+        },
+        "& .MuiBottomNavigationAction-root.Mui-selected": {
+          color: "white",
+          opacity: "1",
+        },
+      }}
+    >
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <Link to="/">
+          <BottomNavigationAction
+            sx={{
+              color: "white",
+              opacity: "0.5",
+            }}
+            label="Home"
+            icon={<HomeOutlinedIcon />}
+          />
+        </Link>
+
+        <Link to="/favorite">
+          <BottomNavigationAction
+            sx={{
+              color: "white",
+              opacity: "0.5",
+            }}
+            label="Watchlist"
+            icon={<BookmarkAddOutlinedIcon />}
+          />
+        </Link>
+
+        <Link to="/">
+          <BottomNavigationAction
+            label="Explore"
+            sx={{
+              color: "white",
+              opacity: "0.5",
+            }}
+            icon={<SearchOutlinedIcon />}
+          />
+        </Link>
+      </BottomNavigation>
+    </Box>
   );
 };
-
-const NavbarM = styled.div`
-  height: 49px;
-  width: 100%;
-  background-color: ${color.redRibbon};
-  position: absolute;
-  bottom: 0px;
-  display: flex;
-`;
-
-const IconPosition = styled.div`
-  height: 49px;
-  width: 125px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Title = styled.p`
-  height: 12px;
-  margin: 0;
-  font-size: 10px;
-  line-height: 12px;
-  color: ${color.white};
-  margin-top: 7px;
-`;
-
-const Icon = styled.img`
-  height: 20px;
-  width: 22px;
-`;
 
 export default NavbarMobile;

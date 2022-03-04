@@ -8,19 +8,15 @@ import NavbarMobile from "./NavbarMobile";
 const Navbar = () => {
   return (
     <>
-      <NavbarBox>
-        <NavbarVisibilityMain>
+      <NavbarVisibilityMain>
+        <NavbarBox>
           <ListMenu>
             <Text>
               <Link to="/">Home</Link>
             </Text>
             <Text>Categories</Text>
           </ListMenu>
-        </NavbarVisibilityMain>
-
-        <Logo src={logo} alt="logo" />
-
-        <NavbarVisibilityMain>
+          <Logo src={logo} alt="logo" />
           <ListMenu>
             <Badge count={3}>
               <Text>
@@ -29,9 +25,8 @@ const Navbar = () => {
             </Badge>
             <Text>Contact</Text>
           </ListMenu>
-        </NavbarVisibilityMain>
-      </NavbarBox>
-
+        </NavbarBox>
+      </NavbarVisibilityMain>
       <NavbarVisibility>
         <NavbarMobile />
       </NavbarVisibility>
@@ -40,9 +35,14 @@ const Navbar = () => {
 };
 
 const NavbarVisibility = styled.div`
-  visibility: hidden;
+  display: none;
   @media only screen and (max-width: 850px) {
+    display: block;
     visibility: visible;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
   }
 `;
 

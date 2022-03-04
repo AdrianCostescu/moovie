@@ -57,6 +57,10 @@ const FooterBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
 `;
 
 const FooterMain = styled.div`
