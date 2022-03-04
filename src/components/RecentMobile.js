@@ -6,35 +6,6 @@ import { CircularProgress } from "@mui/material";
 import { Error } from "./Header";
 import CardMobile from "./CardMobile";
 
-const RecentMobileBox = styled.div`
-  background-color: ${color.black};
-`;
-
-const Title = styled.h1`
-  font-size: 34px;
-  line-height: 41px;
-  letter-spacing: 0.41px;
-  color: ${color.white};
-  margin: 0px auto;
-  padding-top: 66px;
-  margin-bottom: 14px;
-  margin-left: 16px;
-  margin-right: 16px;
-`;
-
-const CardPosition = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-y: scroll;
-  gap: 8px;
-  margin-left: 16px;
-  padding-bottom: 52px;
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
 function RecentMobile() {
   const { movies, error, loading } = useGetMovies();
   return (
@@ -64,5 +35,34 @@ function RecentMobile() {
     </RecentMobileBox>
   );
 }
+
+const RecentMobileBox = styled.div`
+  background-color: ${color.black};
+`;
+
+const Title = styled.h1`
+  font-size: 34px;
+  line-height: 41px;
+  letter-spacing: 0.41px;
+  color: ${color.white};
+  margin: 0px auto;
+  padding-top: 66px;
+  margin-bottom: 14px;
+  margin-left: 16px;
+  margin-right: 16px;
+`;
+
+const CardPosition = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  gap: 8px;
+  margin-left: 16px;
+  padding-bottom: 52px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
 
 export default RecentMobile;

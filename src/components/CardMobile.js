@@ -3,6 +3,18 @@ import styled from "styled-components";
 import { color } from "../styles/color";
 import { Link } from "react-router-dom";
 
+const CardMobile = ({ id, title, release, img }) => {
+  return (
+    <Link to={"/movies/" + id}>
+      <CardMobileBox>
+        <ImgCard src={img}></ImgCard>
+        <Title>{title}</Title>
+        <Data>{release}</Data>
+      </CardMobileBox>
+    </Link>
+  );
+};
+
 const CardMobileBox = styled.div`
   width: 128px;
   border-radius: 20px;
@@ -31,17 +43,5 @@ const Data = styled.p`
   color: #979797;
   margin: 0px auto;
 `;
-
-const CardMobile = ({ id, title, release, img }) => {
-  return (
-    <Link to={"/movies/" + id}>
-      <CardMobileBox>
-        <ImgCard src={img}></ImgCard>
-        <Title>{title}</Title>
-        <Data>{release}</Data>
-      </CardMobileBox>
-    </Link>
-  );
-};
 
 export default CardMobile;
