@@ -7,39 +7,6 @@ import CircularProgress from "@mui/material/CircularProgress";
 import CardMobile from "./CardMobile";
 import back from "../img/back.png";
 
-const FavMobileBox = styled.div`
-  background-color: ${color.black};
-  min-height: 100vh;
-`;
-
-const Icon = styled.img`
-  height: 17px;
-  width: 10px;
-  position: absolute;
-  top: 36px;
-  left: 23px;
-`;
-
-const Title = styled.h1`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 36px;
-  padding-bottom: 58px;
-  font-size: 17px;
-  line-height: 22px;
-  letter-spacing: -0.41px;
-  color: ${color.white};
-  margin: 0 auto;
-`;
-
-const CardPosition = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-`;
-
 const FavoriteMobile = ({ user, movies, loading, error }) => {
   const navigate = useNavigate();
   const favoriteMoviesIds = useMemo(() => {
@@ -78,5 +45,38 @@ const FavoriteMobile = ({ user, movies, loading, error }) => {
     </FavMobileBox>
   );
 };
+
+const FavMobileBox = styled.div`
+  background-color: ${color.black};
+  min-height: 100vh;
+`;
+
+const Icon = styled.img`
+  height: 17px;
+  width: 10px;
+  position: absolute;
+  top: 36px;
+  left: 23px;
+`;
+
+const Title = styled.h1`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 36px;
+  padding-bottom: 58px;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: ${color.white};
+  margin: 0 auto;
+`;
+
+const CardPosition = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+`;
 
 export default FavoriteMobile;
