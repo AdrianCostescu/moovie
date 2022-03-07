@@ -6,9 +6,9 @@ function CloseIcon() {
       <path
         d="M17 1 1 17m16 0L1 1l16 16Z"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

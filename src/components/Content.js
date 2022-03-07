@@ -9,8 +9,14 @@ import { ErrorPosition } from "../pages/Favorite";
 import { Error } from "./Header";
 import CircularProgress from "@mui/material/CircularProgress";
 import ContentMobile from "./ContentMobile";
+import Calendar from "./Calendar";
+import Modal from "../components/Modal";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
+import { CATEGORIES } from "../constants";
 
 const Content = () => {
+  const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
   const [type, setType] = useState("Adventure");
   const { movies, error, loading } = useGetMovies();
 
@@ -30,52 +36,48 @@ const Content = () => {
             <Title>See what movies are coming next month</Title>
             <FilterBox>
               <Text>Filter by</Text>
-              <FormControl
-                sx={{
-                  width: 158,
-                  height: 40,
-                  backgroundColor: "#f5044c",
-                  borderRadius: 2,
-                  color: "#fff",
-                  display: "flex",
-                }}
-              >
+              <FormControl>
                 <Select
                   sx={{
-                    width: 158,
-                    height: 40,
-                    color: "#fff",
-                    fontSize: 18,
+                    width: "158px",
+                    height: "40px",
+                    backgroundColor: "#F5044C",
+                    borderRadius: "8px",
+                    marginLeft: "24px",
+                    marginRight: "16px",
+                    color: "white",
+                    fontSize: "18px",
+                    lineHeight: "60px",
+                    fontWeight: "bold",
                   }}
                   defaultValue={type}
                   value={type}
                   onChange={HandleChange}
                 >
-                  <MenuItem value="Adventure">Adventure</MenuItem>
-                  <MenuItem value="Action">Action</MenuItem>
-                  <MenuItem value="Drama">Drama</MenuItem>
-                  <MenuItem value="Crime">Crime</MenuItem>
-                  <MenuItem value="Comedy">Comedy</MenuItem>
-                  <MenuItem value="Thriller">Thriller</MenuItem>
-                  <MenuItem value="Fantasy">Fantasy</MenuItem>
-                  <MenuItem value="Horror">Horror</MenuItem>
-                  <MenuItem value="Mystery">Mystery</MenuItem>
-                  <MenuItem value="Family">Family</MenuItem>
+                  {CATEGORIES.map((type) => {
+                    return <MenuItem value={type}>{type}</MenuItem>;
+                  })}
                 </Select>
               </FormControl>
-              <FormControl sx={{ marginLeft: "16px" }}>
-                <Select
+              <CalendarButton onClick={() => setIsAddMovieModalOpen(true)}>
+                <EventOutlinedIcon
+                  sx={{ fontSize: "16px", marginLeft: "16px" }}
+                />
+                <span>Any date</span>
+                <ArrowForwardIosIcon
                   sx={{
-                    backgroundColor: "#f5044c",
-                    width: 158,
-                    height: 40,
-                    color: "#fff",
-                    fontSize: 18,
+                    fontSize: "16px",
+                    transform: "rotate(90deg)",
+                    marginRight: "16px",
                   }}
+                />
+                <Modal
+                  open={isAddMovieModalOpen}
+                  onClose={() => setIsAddMovieModalOpen(false)}
                 >
-                  <MenuItem value=""></MenuItem>
-                </Select>
-              </FormControl>
+                  <Calendar player={isAddMovieModalOpen}></Calendar>
+                </Modal>
+              </CalendarButton>
             </FilterBox>
           </HeaderBox>
           {loading ? (
@@ -172,6 +174,20 @@ const CardPosition = styled.div`
   display: flex;
   gap: 28px 16px;
   flex-wrap: wrap;
+`;
+
+const CalendarButton = styled.button`
+  border: none;
+  height: 40px;
+  width: 174px;
+  background-color: transparent;
+  border: 1px solid #f5044c;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #f5044c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default Content;

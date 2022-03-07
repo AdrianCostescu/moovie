@@ -15,8 +15,6 @@ const PhotoSlide = () => {
     return photo ? photo.image : [];
   }, [photo]);
 
-  console.log(photo);
-
   return (
     <SlideBox>
       <Title>Photo</Title>

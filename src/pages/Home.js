@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Recent from "../components/Recent";
 import Content from "../components/Content";
 import { Main } from "../components/Main";
 import Header from "../components/Header";
+import { useCurrentUser, UserContextProvider } from "../context/UserContext";
 
-const HomePage = styled.div``;
+function HomeWithProviders({ children }) {
+  return (
+    <UserContextProvider>
+      <Home>{children}</Home>
+    </UserContextProvider>
+  );
+}
 
 function Home() {
+  const { refetch } = useCurrentUser();
+
+  // on mount
+  useEffect(() => {
+    refetch();
+  }, []);
+
   return (
     <Main>
       <HomePage>
@@ -19,4 +33,6 @@ function Home() {
   );
 }
 
-export default Home;
+const HomePage = styled.div``;
+
+export default HomeWithProviders;

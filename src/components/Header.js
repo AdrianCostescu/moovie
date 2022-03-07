@@ -1,12 +1,55 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { color } from "../styles/color";
 import { useGetMovies } from "../hooks/useGetMovies";
 import CircularProgress from "@mui/material/CircularProgress";
 import HeaderMobile from "./HeaderMobile";
+import Modal from "../components/Modal";
+import Player from "../components/Player";
+import { useAddMovieToFavorite } from "../hooks/useAddMovieToFavorite";
+import { useCurrentUser } from "../context/UserContext";
+import { PrimaryButton, SecondaryButton } from "./core/Button";
+
 const Header = () => {
-  const { movies, error, loading } = useGetMovies();
-  const random = 1 + Math.floor(Math.random() * movies.length - 1);
+  const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
+  const { movies, error, loading, refetch } = useGetMovies();
+
+  const random = useMemo(
+    () => 1 + Math.floor(Math.random() * movies.length - 1),
+    []
+  );
+
+  const selectedMovie = movies[random];
+
+  const { user } = useCurrentUser();
+
+  const [addMovie] = useAddMovieToFavorite();
+
+  const favoriteMoviesIds = useMemo(
+    () => user?.favoriteMoviesIds || [],
+    [user]
+  );
+  const isMovieAlreadyFavorite = Boolean(
+    favoriteMoviesIds.find((movieId) => movieId === selectedMovie.id)
+  );
+
+  async function addMovieToFav() {
+    if (user) {
+      const updatedMoviesFavorites = isMovieAlreadyFavorite
+        ? favoriteMoviesIds.filter((movieId) => movieId !== selectedMovie.id)
+        : [...favoriteMoviesIds, selectedMovie.id];
+
+      await addMovie({
+        variables: {
+          id: user.id,
+          input: {
+            favoriteMoviesIds: updatedMoviesFavorites,
+          },
+        },
+      }).then(() => refetch());
+    }
+  }
+
   return (
     <>
       <Show>
@@ -21,10 +64,27 @@ const Header = () => {
                 <Title>{movies[random].title}</Title>
                 <SubTitle>{movies[random].description}</SubTitle>
                 <ButtonPosition>
-                  <Button color={color.redRibbon}>Watch trailer</Button>
-                  <Button color={color.shark}>
-                    <Span>+</Span>Add to list
-                  </Button>
+                  <PrimaryButton
+                    color={color.redRibbon}
+                    onClick={() => setIsAddMovieModalOpen(true)}
+                  >
+                    Watch trailer
+                  </PrimaryButton>
+
+                  <Modal
+                    open={isAddMovieModalOpen}
+                    onClose={() => setIsAddMovieModalOpen(false)}
+                  >
+                    <Player
+                      player={isAddMovieModalOpen}
+                      id={movies[random].id}
+                    ></Player>
+                  </Modal>
+
+                  <SecondaryButton onClick={addMovieToFav}>
+                    {!isMovieAlreadyFavorite ? <Span>+</Span> : null}
+                    {isMovieAlreadyFavorite ? "Remove" : "Add to list"}
+                  </SecondaryButton>
                 </ButtonPosition>
               </LeftSide>
               <Image img={movies[random].image[0]}></Image>
@@ -45,6 +105,8 @@ const Header = () => {
 };
 
 const Show = styled.div`
+  position: relative;
+
   @media only screen and (max-width: 850px) {
     display: none;
   }

@@ -1,29 +1,58 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../img/moovie-watchers_logo.png";
 import { Badge } from "./Badge";
 import NavbarMobile from "./NavbarMobile";
+import { useCurrentUser } from "../context/UserContext";
+import Avatar from "./core/Avatar";
+import { color } from "../styles/color";
+
+const NAVBAR_ITEMS = {
+  main: {
+    id: "main",
+    label: "Home",
+    path: "/",
+  },
+  favorite: {
+    id: "favorite",
+    label: "Watchlist",
+    path: "/favorite",
+  },
+};
 
 const Navbar = () => {
+  const { user } = useCurrentUser();
+  const location = useLocation();
+
   return (
     <>
       <NavbarVisibilityMain>
         <NavbarBox>
           <ListMenu>
             <Text>
-              <Link to="/">Home</Link>
+              <StyledLink
+                isActive={location.pathname === NAVBAR_ITEMS.main.path}
+                to={NAVBAR_ITEMS.main.path}
+              >
+                {NAVBAR_ITEMS.main.label}
+              </StyledLink>
             </Text>
             <Text>Categories</Text>
           </ListMenu>
           <Logo src={logo} alt="logo" />
           <ListMenu>
-            <Badge count={3}>
+            <Badge count={user?.favoriteMoviesIds?.length}>
               <Text>
-                <Link to="/favorite">Watchlist</Link>
+                <StyledLink
+                  isActive={location.pathname === NAVBAR_ITEMS.favorite.path}
+                  to={NAVBAR_ITEMS.favorite.path}
+                >
+                  {NAVBAR_ITEMS.favorite.label}
+                </StyledLink>
               </Text>
             </Badge>
-            <Text>Contact</Text>
+            <Avatar></Avatar>
           </ListMenu>
         </NavbarBox>
       </NavbarVisibilityMain>
@@ -49,7 +78,6 @@ const NavbarVisibility = styled.div`
 const NavbarVisibilityMain = styled.div`
   visibility: visible;
   @media only screen and (max-width: 850px) {
-    // visibility: hidden;
     display: none;
   }
 `;
@@ -69,8 +97,11 @@ const NavbarBox = styled.div`
 
 const ListMenu = styled.div`
   display: flex;
-  margin-left: 152px;
-  margin-right: 152px;
+  justify-content: space-between;
+  // margin-left: 152px;
+  // margin-right: 152px;
+  margin-left: 10%;
+  margin-right: 10%;
   gap: 80px;
   line-height: 22px;
 `;
@@ -88,6 +119,11 @@ const Text = styled.p`
     color: #fff;
     text-decoration: none;
   }
+`;
+
+const StyledLink = styled(Link)`
+  border-bottom: ${(props) => props.isActive && `1px solid ${color.white} `};
+  padding-bottom: 5px;
 `;
 
 export default Navbar;

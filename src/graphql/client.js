@@ -9,4 +9,3 @@ const apolloClient = new ApolloClient({
 });
 
 export { apolloClient };
- 

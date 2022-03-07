@@ -1,15 +1,55 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { PrimaryButton } from "../components/core/Button";
+import { useAddMovieToFavorite } from "../hooks/useAddMovieToFavorite";
+import { useCurrentUser } from "../context/UserContext";
 
 const Card = ({ title, type, score, img, release, id }) => {
+  const { user, refetch } = useCurrentUser();
+
+  // Get favorite movies from user
+  const favoriteMoviesIds = useMemo(
+    () => user?.favoriteMoviesIds || [],
+    [user]
+  );
+
+  const isMovieAlreadyFavorite = Boolean(
+    favoriteMoviesIds.find((movieId) => movieId === id)
+  );
+
+  const [addMovie] = useAddMovieToFavorite();
+
+  async function addMovieToFavorite() {
+    if (user) {
+      const updatedMoviesFavorites = isMovieAlreadyFavorite
+        ? favoriteMoviesIds.filter((movieId) => movieId !== id)
+        : [...favoriteMoviesIds, id];
+
+      await addMovie({
+        variables: {
+          id: user.id,
+          input: {
+            favoriteMoviesIds: updatedMoviesFavorites,
+          },
+        },
+      })
+        .catch((error) => error)
+        .then((response) => {
+          const favoriteMoviesIds = response?.data?.addMovie?.favoriteMoviesIds;
+          refetch();
+        });
+    }
+  }
   return (
     <CardBox>
       <Link to={"/movies/" + id}>
         <ImgBox img={img}></ImgBox>
       </Link>
       <ButtonPosition>
-        <ButtonWatch>Add to watchlist</ButtonWatch>
+        <PrimaryButton fontSize="small" onClick={addMovieToFavorite}>
+          {isMovieAlreadyFavorite ? "Remove from " : "Add to "} watchlist
+        </PrimaryButton>
         <Nota>{score}</Nota>
       </ButtonPosition>
       <Link to={"/movies/" + id}>
@@ -37,20 +77,6 @@ const ImgBox = styled.div`
   justify-content: end;
 `;
 
-const ButtonWatch = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 106px;
-  height: 32px;
-  background-color: #f5044c;
-  border-radius: 5px;
-  font-size: 10px;
-  line-height: 14px;
-  color: #fff;
-`;
-
 const Nota = styled.div`
   width: 24px;
   height: 24px;
@@ -68,7 +94,7 @@ const ButtonPosition = styled.div`
   display: flex;
   align-items: center;
   gap: 7px;
-  margin-left: 103px;
+  margin-left: 75px;
   margin-top: -56px;
 `;
 

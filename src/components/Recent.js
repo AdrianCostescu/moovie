@@ -5,52 +5,67 @@ import Card from "./Card";
 import { useGetMovies } from "../hooks//useGetMovies";
 import { color } from "../styles/color";
 import RecentMobile from "./RecentMobile";
+import { useGetPaginatedMovies } from "../hooks/useGetPaginatedMovies";
+import { PrimaryButton } from "./core/Button";
+
+const LIMIT = 4;
+const INITIAL_PAGE = 1;
 
 const Recent = () => {
-  const [page, setPage] = useState(0);
-  const [index, setIndex] = useState(4);
+  const [page, setPage] = useState(INITIAL_PAGE);
 
-  // refactor
-  const handleClick = () => {
-    if (page === 0 && index === 4) {
-      setPage(index);
-      setIndex(index + 4);
-    } else if (page === 4 && index === 8) {
-      setPage(index);
-      setIndex(index + 2);
-    } else {
-      setPage(0);
-      setIndex(4);
-    }
+  const {
+    movies,
+    error: getPaginatedMoviesError,
+    loading: isGetPaginatedMoviesLoading,
+  } = useGetPaginatedMovies({
+    page,
+    limit: LIMIT,
+  });
+  const { movies: moviesTotal, error, loading } = useGetMovies();
+  const hasError = Boolean(error || getPaginatedMoviesError);
+  const isLoading = isGetPaginatedMoviesLoading || loading;
+
+  const totalMoviesLength = moviesTotal.length;
+
+  const totalPaginatedMovies =
+    movies.length === LIMIT ? page * LIMIT : (page - 1) * LIMIT + movies.length;
+
+  const handleNextClick = () => {
+    setPage((prevPage) => prevPage + 1);
   };
 
-  const handleClickDown = () => {
-    if (page === 0 && index === 4) {
-      setPage(8);
-      setIndex(10);
-    } else if (page === 4 && index === 8) {
-      setPage(0);
-      setIndex(4);
-    } else {
-      setPage(4);
-      setIndex(8);
-    }
+  const handlePreviousClick = () => {
+    if (page) setPage((prevPage) => prevPage - 1);
   };
 
-  const { movies, error, loading } = useGetMovies();
-  const hasError = Boolean(error);
   return (
     <>
       <Show>
         <RecentBox>
           <TitlePosition>
             <Title>
-              Recent added movies <span>({index}/10)</span>
+              Recent added movies{" "}
+              <span>
+                ({totalPaginatedMovies}/{totalMoviesLength})
+              </span>
             </Title>
-            <Button onClick={handleClickDown}>&#x2329;</Button>
-            <Button onClick={handleClick}>&#x232A;</Button>
+            <PrimaryButton
+              buttonSize="small"
+              disabled={page === INITIAL_PAGE}
+              onClick={handlePreviousClick}
+            >
+              &#x2329;
+            </PrimaryButton>
+            <PrimaryButton
+              buttonSize="small"
+              disabled={totalPaginatedMovies === totalMoviesLength}
+              onClick={handleNextClick}
+            >
+              &#x232A;
+            </PrimaryButton>
           </TitlePosition>
-          {loading ? (
+          {isLoading ? (
             <CircularProgress
               sx={{ position: "absolute", top: "50%", right: "50%" }}
             />
@@ -59,7 +74,7 @@ const Recent = () => {
           ) : (
             <CardPosition>
               {movies.length &&
-                movies.slice(page, index).map((movie) => {
+                movies.map((movie) => {
                   return (
                     <Card
                       key={movie.id}
@@ -128,22 +143,6 @@ const Title = styled.h1`
   span {
     opacity: 0.5;
   }
-`;
-
-const Button = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 32px;
-  height: 32px;
-  background-color: #f5044c;
-  color: #fff;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 8px;
 `;
 
 export default Recent;

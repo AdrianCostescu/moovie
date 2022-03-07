@@ -14,17 +14,29 @@ import { FilterBox, Text } from "../components/Content";
 import { Error } from "../components/Header";
 import CircularProgress from "@mui/material/CircularProgress";
 import FavoriteMobile from "../components/FavoriteMobile";
+import { useCurrentUser, UserContextProvider } from "../context/UserContext";
+import { CATEGORIES } from "../constants";
+
+function FavoriteWithProviders({ children }) {
+  return (
+    <UserContextProvider>
+      <Favorite>{children}</Favorite>
+    </UserContextProvider>
+  );
+}
 
 const Favorite = () => {
+  const [type, setType] = useState("Latest Added");
   const [searchTerm, setSearchTerm] = useState("");
-  const { user, error, loading } = useGetUserById({ id: 1 });
+  const { user, error, loading } = useCurrentUser();
+
   const {
     movies,
     error: getMoviesError,
     loading: isGetMoviesLoading,
   } = useGetMovies();
 
-  const hasMovie = Boolean(movies);
+  const hasMovies = Boolean(movies.length);
 
   const favoriteMoviesIds = useMemo(() => {
     return user ? user.favoriteMoviesIds : [];
@@ -33,6 +45,26 @@ const Favorite = () => {
   const filteredMovies = useMemo(() => {
     return movies.filter((movie) => favoriteMoviesIds.includes(movie.id));
   }, [favoriteMoviesIds, movies]);
+
+  const filteredMoviesByType = useMemo(() => {
+    const filteredMoviesBySearchTerm = filteredMovies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    if (type === "Latest Added") {
+      return filteredMoviesBySearchTerm;
+    } else {
+      return filteredMoviesBySearchTerm.filter((movie) =>
+        movie.type.includes(type)
+      );
+    }
+  });
+
+  const HandleChange = (e) => {
+    setType(e.target.value);
+  };
+
+  const isFavoriteMoviesListEmpty = filteredMoviesByType.length === 0;
 
   return (
     <>
@@ -74,10 +106,14 @@ const Favorite = () => {
                       color: "#F5044C",
                       fontSize: 18,
                     }}
-                    defaultValue="Latest Added"
+                    defaultValue={type}
+                    value={type}
+                    onChange={HandleChange}
                   >
                     <MenuItem value="Latest Added">Latest Added</MenuItem>
-                    <MenuItem value="Action">Action</MenuItem>
+                    {CATEGORIES.map((type) => {
+                      return <MenuItem value={type}>{type}</MenuItem>;
+                    })}
                   </Select>
                   <IoIosArrowDown
                     style={{
@@ -93,37 +129,33 @@ const Favorite = () => {
               <ErrorPosition>
                 <CircularProgress />
               </ErrorPosition>
-            ) : !hasMovie ? (
+            ) : getMoviesError ? (
               <ErrorPosition>
-                <Error>There was a network error. Please try again.</Error>
+                <Error>There was a network error. Please try again.</Error>=
+              </ErrorPosition>
+            ) : !hasMovies ? (
+              <ErrorPosition>
+                <Error>There are no movies.</Error>
+              </ErrorPosition>
+            ) : isFavoriteMoviesListEmpty ? (
+              <ErrorPosition>
+                <Error>There are no movies.</Error>
               </ErrorPosition>
             ) : (
               <CardPosition>
-                {filteredMovies
-                  .filter((val) => {
-                    if (searchTerm === "") {
-                      return val;
-                    } else if (
-                      val.title
-                        .toLowerCase()
-                        .includes(searchTerm.toLocaleLowerCase())
-                    ) {
-                      return val;
-                    }
-                  })
-                  .map((movie) => {
-                    return (
-                      <Card
-                        key={movie.id}
-                        id={movie.id}
-                        title={movie.title}
-                        type={movie.type}
-                        score={movie.score}
-                        img={movie.image[0]}
-                        release={movie.release}
-                      ></Card>
-                    );
-                  })}
+                {filteredMoviesByType.map((movie) => {
+                  return (
+                    <Card
+                      key={movie.id}
+                      id={movie.id}
+                      title={movie.title}
+                      type={movie.type}
+                      score={movie.score}
+                      img={movie.image[0]}
+                      release={movie.release}
+                    ></Card>
+                  );
+                })}
               </CardPosition>
             )}
           </FavoriteBox>
@@ -208,6 +240,7 @@ const Filter = styled.div`
 
 const CardPosition = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-left: 152px;
   margin-right: 152px;
@@ -222,4 +255,4 @@ export const ErrorPosition = styled.div`
   margin-bottom: 200px;
 `;
 
-export default Favorite;
+export default FavoriteWithProviders;

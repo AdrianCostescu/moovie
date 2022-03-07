@@ -5,10 +5,21 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import BookmarkAddOutlinedIcon from "@mui/icons-material/BookmarkAddOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 const NavbarMobile = () => {
   const [value, setValue] = useState(0);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box
@@ -62,6 +73,17 @@ const NavbarMobile = () => {
               opacity: "0.5",
             }}
             icon={<SearchOutlinedIcon />}
+          />
+        </Link>
+
+        <Link to="/profile">
+          <BottomNavigationAction
+            label="Profile"
+            sx={{
+              color: "white",
+              opacity: "0.5",
+            }}
+            icon={<AccountCircleOutlinedIcon />}
           />
         </Link>
       </BottomNavigation>

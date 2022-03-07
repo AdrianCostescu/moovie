@@ -9,11 +9,21 @@ import { AiOutlineSearch } from "react-icons/ai";
 import AddMovie from "../components/AddMovie";
 import NavbarAdmin from "../components/NavbarAdmin";
 import Modal from "../components/Modal";
+import { PrimaryButton } from "../components/core/Button";
 import Stack from "@mui/material/Stack";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import { UserContextProvider } from "../context/UserContext";
 
 const SNACKBAR_DURATION = 6000;
+
+function AdministratorWithProviders({ children }) {
+  return (
+    <UserContextProvider>
+      <Administrator>{children}</Administrator>
+    </UserContextProvider>
+  );
+}
 
 const Administrator = () => {
   const { movies, error, loading, refetch } = useGetMovies();
@@ -30,6 +40,7 @@ const Administrator = () => {
 
   return (
     <AdministratorBox>
+      <NavbarAdmin></NavbarAdmin>
       <Stack spacing={2} sx={{ width: "100%" }}>
         <Snackbar
           open={hasMovieBeenAdded}
@@ -45,7 +56,6 @@ const Administrator = () => {
           </Alert>
         </Snackbar>
       </Stack>
-      <NavbarAdmin></NavbarAdmin>
       <Modal
         open={isAddMovieModalOpen}
         onClose={() => setIsAddMovieModalOpen(false)}
@@ -71,7 +81,9 @@ const Administrator = () => {
             style={{ fontSize: "25px", paddingRight: "24px" }}
           ></AiOutlineSearch>
         </SearchBox>
-        <Button onClick={() => setIsAddMovieModalOpen(true)}>Add new</Button>
+        <PrimaryButton onClick={() => setIsAddMovieModalOpen(true)}>
+          Add new
+        </PrimaryButton>
       </Filter>
       {loading ? (
         <CircularProgress />
@@ -145,21 +157,6 @@ const SearchBar = styled.input`
   }
 `;
 
-const Button = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 176px;
-  height: 48px;
-  border-radius: 8px;
-  background-color: ${color.redRibbon};
-  color: ${color.white};
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: bold;
-`;
-
 const Filter = styled.div`
   width: 1136px;
   display: flex;
@@ -168,4 +165,4 @@ const Filter = styled.div`
   margin-top: 134px;
 `;
 
-export default Administrator;
+export default AdministratorWithProviders;

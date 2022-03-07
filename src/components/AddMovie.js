@@ -6,19 +6,8 @@ import ListItemText from "@mui/material/ListItemText";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
 import MenuItem from "@mui/material/MenuItem";
-
-const CATEGORIES = [
-  "Adventure",
-  "Action",
-  "Drama",
-  "Crime",
-  "Comedy",
-  "Thriller",
-  "Fantasy",
-  "Horror",
-  "Mystery",
-  "Family",
-];
+import { PrimaryButton, TransparentButton } from "./core/Button";
+import { CATEGORIES } from "../constants";
 
 const AddMovie = ({ handleCancel, onSuccesAdd }) => {
   const [types, setTypes] = useState([]);
@@ -112,17 +101,12 @@ const AddMovie = ({ handleCancel, onSuccesAdd }) => {
           <Input name="release" width="560px" type="text"></Input>
         </Label>
         <ButtonPosition>
-          <Button background="#F5044C" color="#ffffff" type="submit">
+          <PrimaryButton flex type="submit">
             Add movie
-          </Button>
-          <Button
-            background="#fff"
-            color="#010103"
-            type="submit"
-            onClick={handleCancel}
-          >
+          </PrimaryButton>
+          <TransparentButton flex onClick={handleCancel}>
             Cancel
-          </Button>
+          </TransparentButton>
         </ButtonPosition>
       </Form>
     </AddBox>
@@ -179,21 +163,6 @@ const Textarea = styled.textarea`
   border: 1px solid #9c9b9b;
   box-sizing: border-box;
   border-radius: 8px;
-`;
-
-const Button = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 561px;
-  height: 48px;
-  border-radius: 8px;
-  background-color: ${(props) => props.background};
-  color: ${(props) => props.color};
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: bold;
 `;
 
 const ButtonPosition = styled.div`

@@ -11,13 +11,24 @@ import { color } from "../styles/color";
 import favorite from "../img/favorite.png";
 import back from "../img/back.png";
 import { useNavigate } from "react-router-dom";
+import Modal from "../components/Modal";
+import Player from "../components/Player";
+import { UserContextProvider } from "../context/UserContext";
+
+function MoviesWithProviders({ children }) {
+  return (
+    <UserContextProvider>
+      <Movies>{children}</Movies>
+    </UserContextProvider>
+  );
+}
 
 const Movies = () => {
-  const { id } = useParams();
+  const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
   const [view, setView] = useState(false);
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  // TODO: add error/loading handling
   const { movie, loading } = useGetMovieById({ id });
   const hasMovie = Boolean(movie);
 
@@ -31,7 +42,10 @@ const Movies = () => {
         <MovieBox>
           <LeftSide>
             <Img img={movie.image[0]}>
-              <PlayButton src={play2}></PlayButton>
+              <PlayButton
+                src={play2}
+                onClick={() => setIsAddMovieModalOpen(true)}
+              ></PlayButton>
               <Icon src={favorite}></Icon>
               <IconBack src={back} onClick={() => navigate(-1)}></IconBack>
             </Img>
@@ -74,6 +88,12 @@ const Movies = () => {
               )}
             </Position>
           </RightSide>
+          <Modal
+            open={isAddMovieModalOpen}
+            onClose={() => setIsAddMovieModalOpen(false)}
+          >
+            <Player player={isAddMovieModalOpen} id={movie.id}></Player>
+          </Modal>
         </MovieBox>
       )}
       <PhotoSlide />
@@ -314,4 +334,4 @@ const SpanCredits = styled.span`
   }
 `;
 
-export default Movies;
+export default MoviesWithProviders;

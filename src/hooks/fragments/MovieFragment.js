@@ -16,6 +16,7 @@ const MovieFragment = gql`
     description
     director
     stars
+    trailer
   }
 `;
 

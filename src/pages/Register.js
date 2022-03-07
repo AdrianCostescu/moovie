@@ -103,6 +103,9 @@ export const Logo = styled.img`
   height: 57px;
   margin-top: 107px;
   margin-bottom: 41px;
+  @media only screen and (max-width: 850px) {
+    margin-top: 52px;
+  }
 `;
 
 export const ContentBox = styled.div`
@@ -115,6 +118,14 @@ export const ContentBox = styled.div`
   align-items: center;
   border-top: 8px solid #212128;
   margin-bottom: 108px;
+
+  @media only screen and (max-width: 850px) {
+    width: 80%;
+    margin: 0 auto;
+    border: 0px;
+    align-items: start;
+    background-color: transparent;
+  }
 `;
 
 export const Title = styled.h1`
@@ -124,6 +135,14 @@ export const Title = styled.h1`
   font-size: 48px;
   line-height: 60px;
   text-align: center;
+
+  @media only screen and (max-width: 850px) {
+    width: 150px;
+    height: auto;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+  }
 `;
 
 export const Form = styled.form`
@@ -133,6 +152,9 @@ export const Form = styled.form`
   align-items: center;
   gap: 16px;
   margin-top: 95px;
+  @media only screen and (max-width: 850px) {
+    margin-top: 44px;
+  }
 `;
 
 export const Input = styled.input`
@@ -154,6 +176,11 @@ export const Input = styled.input`
     color: #9c9b9b;
     padding-left: 16px;
   }
+
+  @media only screen and (max-width: 850px) {
+    width: 310px;
+    margin: 0 auto;
+  }
 `;
 
 export const Button = styled.button`
@@ -170,6 +197,10 @@ export const Button = styled.button`
   line-height: 25px;
   color: #fff;
   cursor: pointer;
+  @media only screen and (max-width: 850px) {
+    width: 310px;
+    margin-top: 31px;
+  }
 `;
 
 export const Text = styled.p`
@@ -179,6 +210,11 @@ export const Text = styled.p`
 
   a {
     color: #9c9b9b;
+  }
+
+  @media only screen and (max-width: 850px) {
+    width: 310px;
+    text-align: center;
   }
 `;
 

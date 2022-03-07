@@ -29,6 +29,12 @@ const SubText = styled.p`
   font-size: 14px;
   line-height: 19px;
   text-align: center;
+  @media only screen and (max-width: 850px) {
+    width: 310px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 0px;
+  }
 `;
 
 const RegisterPage = styled.div`
@@ -38,6 +44,10 @@ const RegisterPage = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 850px) {
+    justify-content: start;
+    align-items: center;
+  }
 `;
 
 const ContentBox = styled.div`
@@ -48,6 +58,15 @@ const ContentBox = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 8px solid #212128;
+
+  @media only screen and (max-width: 850px) {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    border: 0px;
+    align-items: start;
+    background-color: transparent;
+  }
 `;
 
 const Title = styled.h1`
@@ -58,6 +77,12 @@ const Title = styled.h1`
   line-height: 60px;
   text-align: center;
   margin-top: 44px;
+  @media only screen and (max-width: 850px) {
+    width: 310px;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 44px;
+  }
 `;
 
 const Button = styled.button`
@@ -73,6 +98,11 @@ const Button = styled.button`
   font-size: 18px;
   line-height: 25px;
   color: #fff;
+
+  @media only screen and (max-width: 850px) {
+    width: 310px;
+    margin-top: 24px;
+  }
 `;
 
 export default Reset;

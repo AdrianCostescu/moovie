@@ -4,6 +4,7 @@ import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
 import { CloseIcon } from "./icons/CloseIcon";
 import { color } from "../styles/color";
+import { PrimaryButton } from "../components/core/Button";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -54,13 +55,8 @@ const CloseButton = styled.button`
   background: transparent;
 `;
 
-const ModalPrimaryButton = styled.button`
-  background-color: ${color.redRibbon};
+const ModalPrimaryButton = styled(PrimaryButton)`
   padding: 12px 63px;
-  border-radius: 8px;
-  border: none;
-  margin: 0;
-  color: white;
 `;
 
 const ModalSecondaryButton = styled.button`
