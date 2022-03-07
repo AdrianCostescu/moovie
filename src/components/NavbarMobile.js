@@ -7,8 +7,6 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 
 const NavbarMobile = () => {
   const [value, setValue] = useState(0);
@@ -65,7 +63,7 @@ const NavbarMobile = () => {
           />
         </Link>
 
-        <Link to="/">
+        <Link to="/categories">
           <BottomNavigationAction
             label="Explore"
             sx={{

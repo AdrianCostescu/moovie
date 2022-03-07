@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { PrimaryButton } from "../components/core/Button";
 import { useAddMovieToFavorite } from "../hooks/useAddMovieToFavorite";
@@ -7,6 +7,7 @@ import { useCurrentUser } from "../context/UserContext";
 
 const Card = ({ title, type, score, img, release, id }) => {
   const { user, refetch } = useCurrentUser();
+  const navigate = useNavigate();
 
   // Get favorite movies from user
   const favoriteMoviesIds = useMemo(
@@ -39,6 +40,8 @@ const Card = ({ title, type, score, img, release, id }) => {
           const favoriteMoviesIds = response?.data?.addMovie?.favoriteMoviesIds;
           refetch();
         });
+    } else if (!user) {
+      navigate("/login");
     }
   }
   return (

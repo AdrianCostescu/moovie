@@ -9,10 +9,12 @@ import Player from "../components/Player";
 import { useAddMovieToFavorite } from "../hooks/useAddMovieToFavorite";
 import { useCurrentUser } from "../context/UserContext";
 import { PrimaryButton, SecondaryButton } from "./core/Button";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
   const { movies, error, loading, refetch } = useGetMovies();
+  const navigate = useNavigate();
 
   const random = useMemo(
     () => 1 + Math.floor(Math.random() * movies.length - 1),
@@ -47,6 +49,8 @@ const Header = () => {
           },
         },
       }).then(() => refetch());
+    } else if (!user) {
+      navigate("/login");
     }
   }
 
@@ -148,21 +152,6 @@ const ButtonPosition = styled.div`
   display: flex;
   gap: 16px;
   margin-top: 55px;
-`;
-
-const Button = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-  width: 176px;
-  height: 48px;
-  background-color: ${(props) => props.color};
-  border-radius: 8px;
-  font-size: 18px;
-  line-height: 25px;
-  color: ${color.white};
-  font-weight: bold;
 `;
 
 const Span = styled.span`

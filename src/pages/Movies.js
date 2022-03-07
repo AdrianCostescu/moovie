@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../img/imdb.png";
@@ -8,12 +8,15 @@ import { Main } from "../components/Main";
 import { useGetMovieById } from "../hooks/useGetMovieById";
 import CircularProgress from "@mui/material/CircularProgress";
 import { color } from "../styles/color";
-import favorite from "../img/favorite.png";
 import back from "../img/back.png";
 import { useNavigate } from "react-router-dom";
 import Modal from "../components/Modal";
 import Player from "../components/Player";
 import { UserContextProvider } from "../context/UserContext";
+import { useCurrentUser } from "../context/UserContext";
+import { useAddMovieToFavorite } from "../hooks/useAddMovieToFavorite";
+import BookmarkAddOutlinedIcon from "@mui/icons-material/BookmarkAddOutlined";
+import BookmarkRemoveOutlinedIcon from "@mui/icons-material/BookmarkRemoveOutlined";
 
 function MoviesWithProviders({ children }) {
   return (
@@ -29,9 +32,46 @@ const Movies = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const { user, refetch } = useCurrentUser();
   const { movie, loading } = useGetMovieById({ id });
+
   const hasMovie = Boolean(movie);
 
+  // Get favorite movies from user
+  const favoriteMoviesIds = useMemo(
+    () => user?.favoriteMoviesIds || [],
+    [user]
+  );
+
+  const isMovieAlreadyFavorite = Boolean(
+    favoriteMoviesIds.find((movieId) => movieId == id)
+  );
+
+  console.log(favoriteMoviesIds);
+  console.log(isMovieAlreadyFavorite);
+
+  const [addMovie] = useAddMovieToFavorite();
+
+  async function addMovieToFavorite() {
+    if (user) {
+      const updatedMoviesFavorites = isMovieAlreadyFavorite
+        ? favoriteMoviesIds.filter((movieId) => movieId != id)
+        : [...favoriteMoviesIds, parseInt(id)];
+
+      await addMovie({
+        variables: {
+          id: user.id,
+          input: {
+            favoriteMoviesIds: updatedMoviesFavorites,
+          },
+        },
+      })
+        .catch((error) => error)
+        .then((response) => {
+          refetch();
+        });
+    }
+  }
   return (
     <Main>
       {loading ? (
@@ -46,7 +86,18 @@ const Movies = () => {
                 src={play2}
                 onClick={() => setIsAddMovieModalOpen(true)}
               ></PlayButton>
-              <Icon src={favorite}></Icon>
+              <IconClick onClick={addMovieToFavorite}>
+                {isMovieAlreadyFavorite ? (
+                  <BookmarkRemoveOutlinedIcon
+                    sx={{ color: "white", fontSize: "24px", opacity: "0.6" }}
+                  />
+                ) : (
+                  <BookmarkAddOutlinedIcon
+                    sx={{ color: "white", fontSize: "24px" }}
+                  />
+                )}
+              </IconClick>
+
               <IconBack src={back} onClick={() => navigate(-1)}></IconBack>
             </Img>
             <LinkImg>See original source</LinkImg>
@@ -59,7 +110,9 @@ const Movies = () => {
               {movie.type.join(" • ")} • {movie.time}
             </Type>
             <Description>{movie.description}</Description>
-            <ButtonWatch>Add to watchlist</ButtonWatch>
+            <ButtonWatch onClick={addMovieToFavorite}>
+              {isMovieAlreadyFavorite ? "Remove from " : "Add to "} watchlist
+            </ButtonWatch>
             <Position>
               <SubTitle>Director</SubTitle>
               <SubSpan>{movie.director}</SubSpan>
@@ -101,7 +154,7 @@ const Movies = () => {
   );
 };
 
-const Icon = styled.img`
+const IconClick = styled.div`
   visibility: hidden;
   @media only screen and (max-width: 850px) {
     visibility: visible;

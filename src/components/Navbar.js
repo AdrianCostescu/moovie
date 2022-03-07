@@ -19,6 +19,11 @@ const NAVBAR_ITEMS = {
     label: "Watchlist",
     path: "/favorite",
   },
+  categories: {
+    id: "categories",
+    label: "Categories",
+    path: "/categories",
+  },
 };
 
 const Navbar = () => {
@@ -38,7 +43,14 @@ const Navbar = () => {
                 {NAVBAR_ITEMS.main.label}
               </StyledLink>
             </Text>
-            <Text>Categories</Text>
+            <Text>
+              <StyledLink
+                isActive={location.pathname === NAVBAR_ITEMS.categories.path}
+                to={NAVBAR_ITEMS.categories.path}
+              >
+                {NAVBAR_ITEMS.categories.label}
+              </StyledLink>
+            </Text>
           </ListMenu>
           <Logo src={logo} alt="logo" />
           <ListMenu>
@@ -98,8 +110,6 @@ const NavbarBox = styled.div`
 const ListMenu = styled.div`
   display: flex;
   justify-content: space-between;
-  // margin-left: 152px;
-  // margin-right: 152px;
   margin-left: 10%;
   margin-right: 10%;
   gap: 80px;
@@ -112,7 +122,6 @@ const Logo = styled.img`
 `;
 
 const Text = styled.p`
-  //border-bottom: 1px solid #fff;
   display: flex;
 
   a {

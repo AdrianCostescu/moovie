@@ -7,7 +7,7 @@ export function Badge({ count, children }) {
   return (
     <Wrapper>
       {children}
-      <Dot>{count}</Dot>
+      {count ? <Dot>{count}</Dot> : null}
     </Wrapper>
   );
 }

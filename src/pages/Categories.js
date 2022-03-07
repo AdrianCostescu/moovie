@@ -7,39 +7,64 @@ import { useNavigate } from "react-router-dom";
 import { ErrorPosition } from "../pages/Favorite";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Error } from "../components/Header";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Main } from "../components/Main";
+import { UserContextProvider } from "../context/UserContext";
+
+function CategoriesWithProvider({ children }) {
+  return (
+    <UserContextProvider>
+      <Categories>{children}</Categories>
+    </UserContextProvider>
+  );
+}
 
 const Categories = () => {
   const { movies, error, loading } = useGetMovies();
   const navigate = useNavigate();
-
   return (
-    <CategoriesBox>
-      <Text>Categories</Text>
-      {loading ? (
-        <ErrorPosition>
-          <CircularProgress />
-        </ErrorPosition>
-      ) : error ? (
-        <ErrorPosition>
-          <Error>There was a network error. Please try again.</Error>
-        </ErrorPosition>
-      ) : (
-        <CardPosition>
-          {CATEGORIES.map((type) => {
-            return (
-              <Card onClick={() => navigate(type)}>
-                <TextBox>{type}</TextBox>
-                <TextBox>
-                  {movies.filter((movie) => movie.type.includes(type)).length}
-                </TextBox>
-              </Card>
-            );
-          })}
-        </CardPosition>
-      )}
-    </CategoriesBox>
+    <Main>
+      <CategoriesBox>
+        <ArrowPosition onClick={() => navigate(-1)}>
+          <ArrowBackIosNewIcon sx={{ color: "white" }}></ArrowBackIosNewIcon>
+        </ArrowPosition>
+        <Text>Categories</Text>
+        {loading ? (
+          <ErrorPosition>
+            <CircularProgress />
+          </ErrorPosition>
+        ) : error ? (
+          <ErrorPosition>
+            <Error>There was a network error. Please try again.</Error>
+          </ErrorPosition>
+        ) : (
+          <CardPosition>
+            {CATEGORIES.map((type) => {
+              return (
+                <Card onClick={() => navigate(type)}>
+                  <TextBox>{type}</TextBox>
+                  <TextBox>
+                    {movies.filter((movie) => movie.type.includes(type)).length}
+                  </TextBox>
+                </Card>
+              );
+            })}
+          </CardPosition>
+        )}
+      </CategoriesBox>
+    </Main>
   );
 };
+
+export const ArrowPosition = styled.div`
+  visibility: hidden;
+  position: absolute;
+  top: 37px;
+  left: 32px;
+  @media only screen and (max-width: 850px) {
+    visibility: visible;
+  }
+`;
 
 const CategoriesBox = styled.div`
   min-height: 85vh;
@@ -47,6 +72,15 @@ const CategoriesBox = styled.div`
   padding-left: 152px;
   padding-right: 152px;
   padding-top: 152px;
+  @media only screen and (max-width: 850px) {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 37px;
+    padding-bottom: 65px;
+  }
 `;
 
 const CardPosition = styled.div`
@@ -54,6 +88,11 @@ const CardPosition = styled.div`
   flex-wrap: wrap;
   gap: 16px;
   margin: 0 auto;
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
@@ -85,4 +124,4 @@ const TextBox = styled.h1`
   padding-bottom: 10px;
 `;
 
-export default Categories;
+export default CategoriesWithProvider;

@@ -2,6 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
+function Select() {
+  return (
+    <Form>
+      <SelectItem>
+        <Item value="Adventure">Adventure</Item>
+        <Item value="Adventure">Adventure</Item>
+        <Item value="Adventure">Adventure</Item>
+        <Item value="Adventure">Adventure</Item>
+        <Item value="Adventure">Adventure</Item>
+      </SelectItem>
+      <Arrow>
+        <ArrowForwardIosIcon sx={{ fontSize: "16px" }} />
+      </Arrow>
+    </Form>
+  );
+}
+
 const Form = styled.form`
   position: relative;
   width: 158px;
@@ -34,22 +51,5 @@ const Arrow = styled.span`
   transform: rotate(90deg);
   pointer-events: none;
 `;
-
-function Select() {
-  return (
-    <Form>
-      <SelectItem>
-        <Item value="Adventure">Adventure</Item>
-        <Item value="Adventure">Adventure</Item>
-        <Item value="Adventure">Adventure</Item>
-        <Item value="Adventure">Adventure</Item>
-        <Item value="Adventure">Adventure</Item>
-      </SelectItem>
-      <Arrow>
-        <ArrowForwardIosIcon sx={{ fontSize: "16px" }} />
-      </Arrow>
-    </Form>
-  );
-}
 
 export default Select;

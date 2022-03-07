@@ -7,11 +7,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { color } from "../../styles/color";
+import userIcon from "../../img/user.png";
 
 function Avatar() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
 
   const { user, resetState } = useCurrentUser();
+  console.log(user);
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -31,7 +34,6 @@ function Avatar() {
     navigate("/profile");
   };
 
-  const navigate = useNavigate();
   return (
     <>
       <Button
@@ -46,8 +48,9 @@ function Avatar() {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <Icon src={user?.avatar}></Icon>
-        <Name>{user?.name}</Name>
+        {user && <Icon src={user?.avatar}></Icon>}
+        {!user && <Icon src={userIcon}></Icon>}
+        <Name>{user ? user?.name : "No User"}</Name>
         <IoIosArrowDown
           color="white"
           fontSize="22px"
@@ -64,7 +67,7 @@ function Avatar() {
         }}
       >
         <MenuItem sx={{ width: "176px" }} onClick={deleteLocalStorge}>
-          Log out
+          {user ? "Log out" : "Login"}
         </MenuItem>
         <MenuItem onClick={toMyProfile}>My Profile</MenuItem>
       </Menu>
