@@ -12,6 +12,7 @@ import Administrator from "./pages/Administrator.js";
 import MyProfile from "./pages/MyProfile.js";
 import Categories from "./pages/Categories.js";
 import CategoriesType from "./components/CategoriesType.js";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
           <Route path="movies/:id" element={<Movies />} />
           <Route path="favorite" element={<Favorite />} />
           <Route path="profile" element={<MyProfile />} />
-          <Route path="categories" element={<Categories />}></Route>
-          <Route path="categories/:props" element={<CategoriesType />}></Route>
+          <Route path="categories" element={<Categories />} />
+          <Route path="categories/:props" element={<CategoriesType />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </ApolloProvider>
