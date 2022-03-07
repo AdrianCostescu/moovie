@@ -7,6 +7,7 @@ import { color } from "../styles/color";
 import RecentMobile from "./RecentMobile";
 import { useGetPaginatedMovies } from "../hooks/useGetPaginatedMovies";
 import { PrimaryButton } from "./core/Button";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 const LIMIT = 4;
 const INITIAL_PAGE = 1;
@@ -50,20 +51,26 @@ const Recent = () => {
                 ({totalPaginatedMovies}/{totalMoviesLength})
               </span>
             </Title>
-            <PrimaryButton
-              buttonSize="small"
-              disabled={page === INITIAL_PAGE}
-              onClick={handlePreviousClick}
-            >
-              &#x2329;
-            </PrimaryButton>
-            <PrimaryButton
-              buttonSize="small"
-              disabled={totalPaginatedMovies === totalMoviesLength}
-              onClick={handleNextClick}
-            >
-              &#x232A;
-            </PrimaryButton>
+            <ArrowPosition>
+              <PrimaryButton
+                buttonSize="small"
+                disabled={page === INITIAL_PAGE}
+                onClick={handlePreviousClick}
+              >
+                <ArrowBackIosNewIcon
+                  sx={{ fontSize: "16px" }}
+                ></ArrowBackIosNewIcon>
+              </PrimaryButton>
+              <PrimaryButton
+                buttonSize="small"
+                disabled={totalPaginatedMovies === totalMoviesLength}
+                onClick={handleNextClick}
+              >
+                <ArrowBackIosNewIcon
+                  sx={{ fontSize: "16px", transform: "rotate(180deg)" }}
+                ></ArrowBackIosNewIcon>
+              </PrimaryButton>
+            </ArrowPosition>
           </TitlePosition>
           {isLoading ? (
             <CircularProgress
@@ -143,6 +150,11 @@ const Title = styled.h1`
   span {
     opacity: 0.5;
   }
+`;
+
+const ArrowPosition = styled.div`
+  display: flex;
+  gap: 8px;
 `;
 
 export default Recent;
