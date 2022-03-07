@@ -100,7 +100,7 @@ const NavbarBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: ${color.white};
 
   @media only screen and (max-width: 850px) {
     justify-content: center;
@@ -125,7 +125,7 @@ const Text = styled.p`
   display: flex;
 
   a {
-    color: #fff;
+    color: ${color.white};
     text-decoration: none;
   }
 `;

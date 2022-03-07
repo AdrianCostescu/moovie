@@ -88,7 +88,7 @@ const Icon = styled.img`
   width: 40px;
   border-radius: 50%;
   background-color: ${color.white};
-  border: 2px solid #f5044c;
+  border: 2px solid ${color.redRibbon};
   margin-right: 16px;
 `;
 export default Avatar;

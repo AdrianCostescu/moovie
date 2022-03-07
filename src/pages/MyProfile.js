@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import { useUpdateUserInfo } from "../hooks/useUpdateUserInfo";
 import { useCurrentUser, UserContextProvider } from "../context/UserContext";
 
-
 function MyProfileWithProviders({ children }) {
   return (
     <UserContextProvider>
@@ -146,11 +145,11 @@ const Logo = styled.img`
 
 const BoxProfile = styled.div`
   max-width: 560px;
-  border-top: 8px solid #212128;
+  border-top: 8px solid ${color.shark};
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0a0a0a;
+  background-color: ${color.ebony};
   padding: 0px 95px 44px 95px;
   margin-bottom: 44px;
   @media only screen and (max-width: 850px) {
@@ -201,7 +200,7 @@ const Input = styled.input`
   outline: none;
   width: 367px;
   height: 48px;
-  border: 1px solid #9c9b9b;
+  border: 1px solid ${color.dustyGray};
   box-sizing: border-box;
   border-radius: 8px;
   color: white;
@@ -210,7 +209,7 @@ const Input = styled.input`
     font-family: SF Pro Display;
     font-size: 18px;
     line-height: 21px;
-    color: #9c9b9b;
+    color: ${color.dustyGray};
     padding-left: 16px;
   }
 `;

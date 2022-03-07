@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { PrimaryButton } from "../components/core/Button";
 import { useAddMovieToFavorite } from "../hooks/useAddMovieToFavorite";
 import { useCurrentUser } from "../context/UserContext";
+import { color } from "../styles/color";
 
 const Card = ({ title, type, score, img, release, id }) => {
   const { user, refetch } = useCurrentUser();
@@ -83,14 +84,15 @@ const ImgBox = styled.div`
 const Nota = styled.div`
   width: 24px;
   height: 24px;
-  background-color: #ff9a03;
+  background-color: ${color.california};
   boreder-radius: 5px;
   font-size: 10px;
   line-height: 80px;
-  color: #fff;
+  color: ${color.white};
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
 `;
 
 const ButtonPosition = styled.div`
@@ -106,7 +108,7 @@ const Title = styled.h1`
   height: 48px;
   font-size: 18px;
   line-height: 80px;
-  color: #fff;
+  color: ${color.white};
   display: flex;
   align-items: center;
   margin-top: 24px;
@@ -117,7 +119,7 @@ const SubTitle = styled.p`
   font-size: 14px;
   line-height: 19px;
   opacity: 0.5;
-  color: #fff;
+  color: ${color.white};
   margin-top: -15px;
   text-decoration: none;
 `;

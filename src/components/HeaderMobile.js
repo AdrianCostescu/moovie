@@ -68,7 +68,7 @@ const SubTitle = styled.p`
   font-size: 13px;
   line-height: 18px;
   letter-spacing: -0.08px;
-  color: #979797;
+  color: ${color.dustyGray};
   margin-top: 9px;
   margin-bottom: 53px;
 `;

@@ -180,7 +180,7 @@ const IconBack = styled.img`
 
 const MovieBox = styled.div`
   width: 100%;
-  background-color: #010103;
+  background-color: ${color.ebony};
   display: flex;
   justify-content: center;
   padding-bottom: 117px;
@@ -242,7 +242,7 @@ const LinkImg = styled.p`
   font-size: 18px;
   line-height: 25px;
   text-decoration-line: underline;
-  color: #ffffff;
+  color: ${color.white};
   opacity: 0.6;
 
   @media only screen and (max-width: 850px) {
@@ -267,7 +267,7 @@ const RightSide = styled.div`
 const Title = styled.div`
   font-size: 48px;
   line-height: 60px;
-  color: #fff;
+  color: ${color.white};
   height: 53px;
   display: flex;
   align-items: center;
@@ -295,7 +295,7 @@ const Type = styled.p`
   height: 25px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
   opacity: 0.6;
 
   @media only screen and (max-width: 850px) {
@@ -306,7 +306,7 @@ const Type = styled.p`
 
 const Description = styled.p`
   width: 464px;
-  color: #fff;
+  color: ${color.white};
   font-size: 18px;
   line-height: 25px;
   @media only screen and (max-width: 850px) {
@@ -326,11 +326,11 @@ const ButtonWatch = styled.button`
   outline: none;
   width: 176px;
   height: 48px;
-  background-color: #f5044c;
+  background-color: ${color.redRibbon};
   border-radius: 5px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
   margin-top: 48px;
   margin-bottom: 52px;
 
@@ -348,7 +348,7 @@ const SubTitle = styled.p`
   height: 25px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
   opacity: 0.6;
 
   @media only screen and (max-width: 850px) {
@@ -362,7 +362,7 @@ const SubSpan = styled.p`
   width: 368px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
   margin-left: 16px;
   display: flex;
   flex-wrap: wrap;
@@ -376,7 +376,7 @@ const SubSpan = styled.p`
 `;
 
 const SpanCredits = styled.span`
-  color: #f5044c;
+  color: ${color.redRibbon};
   font-size: 18px;
   line-height: 25px;
   cursor: pointer;

@@ -147,7 +147,7 @@ const Label = styled.label`
 const Input = styled.input`
   height: 48px;
   width: ${(props) => props.width};
-  border: 1px solid #9c9b9b;
+  border: 1px solid ${color.dustyGray};
   box-sizing: border-box;
   border-radius: 8px;
 `;
@@ -160,7 +160,7 @@ const Position = styled.div`
 const Textarea = styled.textarea`
   width: 560px;
   height: 159px;
-  border: 1px solid #9c9b9b;
+  border: 1px solid ${color.dustyGray};
   box-sizing: border-box;
   border-radius: 8px;
 `;

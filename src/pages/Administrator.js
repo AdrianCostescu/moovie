@@ -133,7 +133,7 @@ const SearchBox = styled.div`
   display: flex;
   align-items: center;
   background-color: ${color.white};
-  border: 1px solid #9c9b9b;
+  border: 1px solid ${color.dustyGray};
   border-radius: 5px;
 `;
 

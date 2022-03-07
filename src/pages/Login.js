@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useGetUserCredentialsLazyQuery } from "../hooks/useGetUserCredentialsLazyQuery";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import { color } from "../styles/color";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -106,7 +107,7 @@ const Login = () => {
 const Reset = styled.p`
   width: 368px;
   height: 30px;
-  color: #9c9b9b;
+  color: ${color.dustyGray};
   font-size: 14px;
   line-height: 80px;
   display: flex;
@@ -114,7 +115,7 @@ const Reset = styled.p`
   align-items: flex-end;
 
   a {
-    color: #9c9b9b;
+    color: ${color.dustyGray};
     text-decoration: none;
   }
   @media only screen and (max-width: 850px) {
@@ -141,12 +142,12 @@ const ButtonSubmit = styled.button`
   outline: none;
   width: 367px;
   height: 48px;
-  background-color: #f5044c;
+  background-color: ${color.redRibbon};
   border-radius: 8px;
   margin-top: 89px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
   cursor: pointer;
 
   @media only screen and (max-width: 850px) {

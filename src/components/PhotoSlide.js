@@ -39,7 +39,7 @@ const PhotoSlide = () => {
 
 const SlideBox = styled.div`
   height: 444px;
-  background-color: #13131c;
+  background-color: ${color.cinder};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +51,7 @@ const SlideBox = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #fff;
+  color: ${color.white};
   font-size: 48px;
   line-height: 60px;
   margin-left: 152px;

@@ -14,6 +14,7 @@ import Modal from "../components/Modal";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
 import { CATEGORIES } from "../constants";
+import { color } from "../styles/color";
 
 const Content = () => {
   const [isAddMovieModalOpen, setIsAddMovieModalOpen] = useState(false);
@@ -132,7 +133,7 @@ const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #13131c;
+  background-color: ${color.cinder};
   padding-top: 120px;
 `;
 
@@ -145,7 +146,7 @@ const Title = styled.h1`
   height: 128px;
   width: 592px;
   font-size: 48px;
-  color: #fff;
+  color: ${color.white};
   margin-top: 0px;
 `;
 
@@ -154,7 +155,7 @@ export const Text = styled.p`
   height: 60px;
   font-size: 18px;
   line-height: 60px;
-  color: #ffffff;
+  color: ${color.white};
   opacity: 0.7;
 `;
 
@@ -181,10 +182,10 @@ const CalendarButton = styled.button`
   height: 40px;
   width: 174px;
   background-color: transparent;
-  border: 1px solid #f5044c;
+  border: 1px solid ${color.redRibbon};
   box-sizing: border-box;
   border-radius: 8px;
-  color: #f5044c;
+  color: ${color.redRibbon};
   display: flex;
   justify-content: space-between;
   align-items: center;

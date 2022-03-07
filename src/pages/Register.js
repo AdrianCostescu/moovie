@@ -5,6 +5,7 @@ import logo from "../img/moovie-watchers_logo.png";
 import { useRegisterUser } from "../hooks/useRegisterUser";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import { color } from "../styles/color";
 
 const Register = () => {
   const [open, setOpen] = useState(false);
@@ -91,7 +92,7 @@ const Register = () => {
 };
 
 export const RegisterPage = styled.div`
-  background-color: #010103;
+  background-color: ${color.ebony};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,14 +110,14 @@ export const Logo = styled.img`
 `;
 
 export const ContentBox = styled.div`
-  background-color: #0a0a0a;
+  background-color: ${color.ebony};
   height: 711px;
   width: 560px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 8px solid #212128;
+  border-top: 8px solid ${color.shark};
   margin-bottom: 108px;
 
   @media only screen and (max-width: 850px) {
@@ -131,7 +132,7 @@ export const ContentBox = styled.div`
 export const Title = styled.h1`
   width: 300px;
   height: 144px;
-  color: #fff;
+  color: ${color.white};
   font-size: 48px;
   line-height: 60px;
   text-align: center;
@@ -164,7 +165,7 @@ export const Input = styled.input`
   outline: none;
   width: 367px;
   height: 48px;
-  border: 1px solid #9c9b9b;
+  border: 1px solid ${color.dustyGray};
   box-sizing: border-box;
   border-radius: 8px;
   color: white;
@@ -173,7 +174,7 @@ export const Input = styled.input`
     font-family: SF Pro Display;
     font-size: 18px;
     line-height: 21px;
-    color: #9c9b9b;
+    color: ${color.dustyGray};
     padding-left: 16px;
   }
 
@@ -190,12 +191,12 @@ export const Button = styled.button`
   outline: none;
   width: 367px;
   height: 48px;
-  background-color: #f5044c;
+  background-color: ${color.redRibbon};
   border-radius: 8px;
   margin-top: 89px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
   cursor: pointer;
   @media only screen and (max-width: 850px) {
     width: 310px;
@@ -204,12 +205,12 @@ export const Button = styled.button`
 `;
 
 export const Text = styled.p`
-  color: #9c9b9b;
+  color: ${color.dustyGray};
   font-size: 14px;
   line-height: 80px;
 
   a {
-    color: #9c9b9b;
+    color: ${color.dustyGray};
   }
 
   @media only screen and (max-width: 850px) {

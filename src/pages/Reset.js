@@ -2,6 +2,7 @@ import React from "react";
 import { Logo, Form, Input } from "./Register";
 import logo from "../img/moovie-watchers_logo.png";
 import styled from "styled-components";
+import { color } from "../styles/color";
 
 const Reset = () => {
   return (
@@ -25,7 +26,7 @@ const Reset = () => {
 const SubText = styled.p`
   width: 346px;
   height: 40px;
-  color: #9c9b9b;
+  color: ${color.dustyGray};
   font-size: 14px;
   line-height: 19px;
   text-align: center;
@@ -39,7 +40,7 @@ const SubText = styled.p`
 
 const RegisterPage = styled.div`
   height: 100vh;
-  background-color: #010103;
+  background-color: ${color.ebony};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +58,7 @@ const ContentBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 8px solid #212128;
+  border-top: 8px solid ${color.shark};
 
   @media only screen and (max-width: 850px) {
     height: auto;
@@ -72,7 +73,7 @@ const ContentBox = styled.div`
 const Title = styled.h1`
   width: 432px;
   height: 45px;
-  color: #fff;
+  color: ${color.white};
   font-size: 48px;
   line-height: 60px;
   text-align: center;
@@ -92,12 +93,12 @@ const Button = styled.button`
   outline: none;
   width: 367px;
   height: 48px;
-  background-color: #f5044c;
+  background-color: ${color.redRibbon};
   border-radius: 8px;
   margin-top: 27px;
   font-size: 18px;
   line-height: 25px;
-  color: #fff;
+  color: ${color.white};
 
   @media only screen and (max-width: 850px) {
     width: 310px;

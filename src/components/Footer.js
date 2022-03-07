@@ -5,6 +5,7 @@ import logo from "../img/moovie-watchers_logo.png";
 import facebook from "../img/Vector.png";
 import twiter from "../img/Vector2.png";
 import youtube from "../img/Vector3.png";
+import { color } from "../styles/color";
 
 const Footer = () => {
   return (
@@ -53,7 +54,7 @@ const Footer = () => {
 const FooterBox = styled.div`
   height: 352px;
   width: 100%;
-  background-color: #010102;
+  background-color: ${color.ebony};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +73,7 @@ const FooterMain = styled.div`
 
 const SecondBox = styled.div`
   height: 91px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid ${color.white};
   margin-left: 152px;
   margin-right: 152px;
   display: flex;
@@ -91,10 +92,10 @@ const Text = styled.p`
   height: 43px;
   font-size: 14px;
   line-height: 42px;
-  color: #fff;
+  color: ${color.white};
 
   a {
-    color: #fff;
+    color: ${color.white};
     text-decoration: none;
   }
 `;
@@ -111,7 +112,7 @@ const TextL = styled.p`
   height: 43px;
   font-size: 14px;
   line-height: 42px;
-  color: #fff;
+  color: ${color.white};
   opacity: 0.7;
 `;
 
@@ -127,7 +128,7 @@ const BackgrounIcon = styled.div`
   height: 32px;
   width: 32px;
   border-radius: 25px;
-  background-color: #f5044c;
+  background-color: ${color.redRibbon};
   display: flex;
   justify-content: center;
   align-items: center;

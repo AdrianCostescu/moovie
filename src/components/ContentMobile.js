@@ -85,7 +85,7 @@ const Button = styled.button`
   height: 31px;
   background-color: transparent;
   color: ${color.white};
-  border: 0.636364px solid #f5044c;
+  border: 0.636364px solid ${color.redRibbon};
   box-sizing: border-box;
   border-radius: 30.8965px;
   font-size: 11.4545px;

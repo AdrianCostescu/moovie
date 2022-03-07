@@ -40,7 +40,7 @@ const Data = styled.p`
   font-size: 13px;
   line-height: 18px;
   letter-spacing: -0.08px;
-  color: #979797;
+  color: ${color.dustyGray};
   margin: 0px auto;
 `;
 

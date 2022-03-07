@@ -7,6 +7,9 @@ const black = "#000000";
 const mercury = "#e5e5e5";
 const shiraz = "#C7044C";
 const mineShaft = "#383838";
+const dustyGray = "#979797";
+const cinder = "#13131c";
+const california = "#FF9A03";
 
 export const color = {
   redRibbon,
@@ -18,4 +21,7 @@ export const color = {
   shiraz,
   shipGray,
   mineShaft,
+  dustyGray,
+  cinder,
+  california,
 };

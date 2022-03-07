@@ -144,7 +144,7 @@ const Title = styled.h1`
   height: 69px;
   font-size: 18px;
   line-height: 80px;
-  color: #fff;
+  color: ${color.white};
   margin-right: 797px;
 
   span {

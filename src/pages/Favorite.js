@@ -188,7 +188,7 @@ const ShowMobile = styled.div`
 
 const FavoriteBox = styled.div`
   background-color: ${color.ebony};
-  color: #fff;
+  color: ${color.white};
   display: flex;
   flex-direction: column;
 `;
@@ -196,7 +196,7 @@ const FavoriteBox = styled.div`
 const Title = styled.div`
   width: 560px;
   height: 120px;
-  color: #fff;
+  color: ${color.white};
   font-size: 48px;
   line-height: 60px;
   margin-top: 100px;
