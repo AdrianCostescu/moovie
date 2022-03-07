@@ -2,9 +2,13 @@
   "movies": [
     {
       "title": "The Unforgivable",
+      "trailer": "http://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Nora Fingscheidt",
-      "writers": ["Peter Craig", "Hillary Seitz"],
+      "writers": [
+        "Peter Craig",
+        "Hillary Seitz"
+      ],
       "stars": [
         "Sandra Bullock",
         "Viola Davis",
@@ -23,14 +27,20 @@
         "https://m.media-amazon.com/images/M/MV5BOGJiOGY4ZGItOTI0MS00NWVmLWE5NDEtZmVmNTI5NTFjOWIxXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_UY100_CR25,0,100,100_AL_.jpg"
       ],
       "time": "1h 51m",
-      "type": ["Crime", "Drama"],
+      "type": [
+        "Crime",
+        "Drama"
+      ],
       "id": 2
     },
     {
       "title": "Red Notice",
+      "trailer": "https://www.youtube.com/watch?v=Pj0wz7zu3Ms&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Rawson Marshall Thurber",
-      "writers": ["Rawson Marshall Thurber"],
+      "writers": [
+        "Rawson Marshall Thurber"
+      ],
       "stars": [
         "Dwayne Johnson",
         "Ryan Reynolds",
@@ -49,14 +59,24 @@
         "https://m.media-amazon.com/images/M/MV5BOWI2MmMyY2MtNTkwZS00ZTdhLWFhYjUtZDYxMTUzMjI0YmRkXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "1h 58m",
-      "type": ["Action", "Comedy", "Thriller"],
+      "type": [
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
       "id": 3
     },
     {
       "title": "Spider-Man: No Way Home",
+      "trailer": "https://www.youtube.com/watch?v=JfVOs4VSpmA&ab_channel=SonyPicturesEntertainment",
       "release": "05/12/2021",
       "director": "Jon Watts",
-      "writers": ["Chris McKenna", "Erik Sommers", "Stan Lee", "Steve Ditko"],
+      "writers": [
+        "Chris McKenna",
+        "Erik Sommers",
+        "Stan Lee",
+        "Steve Ditko"
+      ],
       "stars": [
         "Tom Holland",
         "Zendaya Maree",
@@ -75,14 +95,23 @@
         "https://m.media-amazon.com/images/M/MV5BMTNiNGNjNmQtZjcwMi00ZGM1LTg3MzUtY2JiOGNjNWVlNjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "2h 28m",
-      "type": ["Action", "Adventure", "Fantasy"],
+      "type": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
       "id": 4
     },
     {
       "title": "Scream",
+      "trailer": "https://www.youtube.com/watch?v=beToTslH17s&ab_channel=ParamountPictures",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "writers": [
+        "James Vanderbilt",
+        "Guy Busick",
+        "Kevin Williamson"
+      ],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -101,14 +130,23 @@
         "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
       ],
       "time": "1h 54m",
-      "type": ["Horror", "Mystery", "Thriller"],
+      "type": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "id": 5
     },
     {
       "title": "The Ice Age Adventures",
+      "trailer": "https://www.youtube.com/watch?v=0U0L4uT0btQ&ab_channel=WaltDisneyStudios",
       "release": "05/12/2021",
       "director": "John C. Donkin",
-      "writers": ["Jim Hecht", "William Schifrin", "Ray DeLaurentis"],
+      "writers": [
+        "Jim Hecht",
+        "William Schifrin",
+        "Ray DeLaurentis"
+      ],
       "stars": [
         "Utkarsh Ambudkar",
         "Sean Kenin",
@@ -127,14 +165,23 @@
         "https://m.media-amazon.com/images/M/MV5BZDI1MGYwNTctNTRkOS00NTBlLTgxZTEtODkzYmEzY2ExYmQ2XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_UY100_CR39,0,100,100_AL_.jpg"
       ],
       "time": "1h 22m",
-      "type": ["Animation", "Comedy", "Family"],
+      "type": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
       "id": 6
     },
     {
       "title": "Scream",
+      "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "writers": [
+        "James Vanderbilt",
+        "Guy Busick",
+        "Kevin Williamson"
+      ],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -153,14 +200,23 @@
         "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
       ],
       "time": "1h 54m",
-      "type": ["Horror", "Mystery", "Thriller"],
+      "type": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "id": 7
     },
     {
       "title": "Scream",
+      "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "writers": [
+        "James Vanderbilt",
+        "Guy Busick",
+        "Kevin Williamson"
+      ],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -179,14 +235,23 @@
         "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
       ],
       "time": "1h 54m",
-      "type": ["Horror", "Mystery", "Thriller"],
+      "type": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "id": 8
     },
     {
       "title": "Scream",
+      "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "writers": [
+        "James Vanderbilt",
+        "Guy Busick",
+        "Kevin Williamson"
+      ],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -205,95 +270,50 @@
         "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
       ],
       "time": "1h 54m",
-      "type": ["Horror", "Mystery", "Thriller"],
+      "type": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "id": 9
-    },
-    {
-      "title": "Scream",
-      "release": "05/12/2021",
-      "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
-      "stars": [
-        "Neve Campbell",
-        "Courteney Cox",
-        "David Arquette",
-        "Melissa Barrera",
-        "Jack Quaid",
-        "Mikey Madison",
-        "Jenna Ortega"
-      ],
-      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
-      "score": "7.0",
-      "image": [
-        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
-        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
-      ],
-      "time": "1h 54m",
-      "type": ["Horror", "Mystery", "Thriller"],
-      "id": 10
-    },
-    {
-      "title": "asdf",
-      "trailer": "asdfd",
-      "source": "saf",
-      "description": "dsaf",
-      "score": "5",
-      "release": "5",
-      "type": ["Comedy"],
-      "image": ["asdf"],
-      "id": 11
     }
   ],
   "users": [
     {
       "id": 1,
-      "name": "Adrian",
-      "email": "",
-      "password": "1234",
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin",
       "isAdmin": true,
-      "favoriteMoviesIds": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      "avatar": "https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1646599762~hmac=96dc2813e9c9ea106800c363f1d08e2a",
+      "favoriteMoviesIds": [
+        3,
+        2,
+        4,
+        5
+      ]
     },
     {
       "id": 2,
-      "name": "Ion",
-      "email": "",
-      "password": "1234",
+      "name": "user",
+      "email": "user@user.com",
+      "password": "user",
       "isAdmin": false,
-      "favoriteMoviesIds": [2, 4]
+      "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      "favoriteMoviesIds": [
+        6,
+        2,
+        3,
+        7
+      ]
     },
     {
-      "name": "sadf",
-      "email": "fdsafsa@yahoo.com",
-      "password": "sdf",
+      "name": "Adrian",
+      "email": "adrian@adrian.com",
+      "password": "adrian",
       "isAdmin": false,
       "favoriteMoviesIds": [],
       "id": 3
-    },
-    {
-      "name": "sadfasdf",
-      "email": "fdsafsa@yahoo.com",
-      "password": "dsfasdf",
-      "isAdmin": false,
-      "favoriteMoviesIds": [],
-      "id": 4
-    },
-    {
-      "name": "sadf",
-      "email": "costescuadrian@outlook.com",
-      "password": "32e",
-      "isAdmin": false,
-      "favoriteMoviesIds": [],
-      "id": 5
-    },
-    {
-      "name": "asdas",
-      "email": "costescuadrian@outlook.com",
-      "password": "asdf",
-      "isAdmin": false,
-      "favoriteMoviesIds": [],
-      "id": 6
     }
   ]
 }

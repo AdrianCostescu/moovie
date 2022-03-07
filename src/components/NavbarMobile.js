@@ -6,17 +6,21 @@ import BookmarkAddOutlinedIcon from "@mui/icons-material/BookmarkAddOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link } from "react-router-dom";
+import { useCurrentUser } from "../context/UserContext";
+import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 const NavbarMobile = () => {
+  const navigate = useNavigate();
+  const { user } = useCurrentUser();
   const [value, setValue] = useState(0);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
+
+  const goTo = () => {
+    if (user) {
+      navigate("/profile");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
@@ -74,8 +78,9 @@ const NavbarMobile = () => {
           />
         </Link>
 
-        <Link to="/profile">
+        <Try>
           <BottomNavigationAction
+            onClick={goTo}
             label="Profile"
             sx={{
               color: "white",
@@ -83,10 +88,12 @@ const NavbarMobile = () => {
             }}
             icon={<AccountCircleOutlinedIcon />}
           />
-        </Link>
+        </Try>
       </BottomNavigation>
     </Box>
   );
 };
+
+const Try = styled.div``;
 
 export default NavbarMobile;

@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useUpdateUserInfo } from "../hooks/useUpdateUserInfo";
 import { useCurrentUser, UserContextProvider } from "../context/UserContext";
 
+
 function MyProfileWithProviders({ children }) {
   return (
     <UserContextProvider>
