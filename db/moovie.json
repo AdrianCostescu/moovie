@@ -5,7 +5,10 @@
       "trailer": "https://www.youtube.com/watch?v=RbIxYm3mKzI",
       "release": "05/12/2021",
       "director": "Adam McKay",
-      "writers": ["Adam McKay", "David Sirota"],
+      "writers": [
+        "Adam McKay",
+        "David Sirota"
+      ],
       "stars": [
         "Leonardo DiCaprio",
         "Jennifer Lawrence",
@@ -24,7 +27,11 @@
         "https://m.media-amazon.com/images/M/MV5BZjJjZjFiNTQtOTgzZC00ZjlkLWI2YTQtYWRlMzdjODhiZjlmXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "2h 18m",
-      "type": ["Comedy", "Drama", "Sci-Fi"],
+      "type": [
+        "Comedy",
+        "Drama",
+        "Sci-Fi"
+      ],
       "id": 1
     },
     {
@@ -32,7 +39,10 @@
       "trailer": "http://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Nora Fingscheidt",
-      "writers": ["Peter Craig", "Hillary Seitz"],
+      "writers": [
+        "Peter Craig",
+        "Hillary Seitz"
+      ],
       "stars": [
         "Sandra Bullock",
         "Viola Davis",
@@ -51,7 +61,10 @@
         "https://m.media-amazon.com/images/M/MV5BOGJiOGY4ZGItOTI0MS00NWVmLWE5NDEtZmVmNTI5NTFjOWIxXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_UY100_CR25,0,100,100_AL_.jpg"
       ],
       "time": "1h 51m",
-      "type": ["Crime", "Drama"],
+      "type": [
+        "Crime",
+        "Drama"
+      ],
       "id": 2
     },
     {
@@ -59,7 +72,9 @@
       "trailer": "https://www.youtube.com/watch?v=Pj0wz7zu3Ms&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Rawson Marshall Thurber",
-      "writers": ["Rawson Marshall Thurber"],
+      "writers": [
+        "Rawson Marshall Thurber"
+      ],
       "stars": [
         "Dwayne Johnson",
         "Ryan Reynolds",
@@ -78,7 +93,11 @@
         "https://m.media-amazon.com/images/M/MV5BOWI2MmMyY2MtNTkwZS00ZTdhLWFhYjUtZDYxMTUzMjI0YmRkXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "1h 58m",
-      "type": ["Action", "Comedy", "Thriller"],
+      "type": [
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
       "id": 3
     },
     {
@@ -86,7 +105,12 @@
       "trailer": "https://www.youtube.com/watch?v=JfVOs4VSpmA&ab_channel=SonyPicturesEntertainment",
       "release": "05/12/2021",
       "director": "Jon Watts",
-      "writers": ["Chris McKenna", "Erik Sommers", "Stan Lee", "Steve Ditko"],
+      "writers": [
+        "Chris McKenna",
+        "Erik Sommers",
+        "Stan Lee",
+        "Steve Ditko"
+      ],
       "stars": [
         "Tom Holland",
         "Zendaya Maree",
@@ -105,7 +129,11 @@
         "https://m.media-amazon.com/images/M/MV5BMTNiNGNjNmQtZjcwMi00ZGM1LTg3MzUtY2JiOGNjNWVlNjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "2h 28m",
-      "type": ["Action", "Adventure", "Fantasy"],
+      "type": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
       "id": 4
     },
     {
@@ -113,7 +141,11 @@
       "trailer": "https://www.youtube.com/watch?v=beToTslH17s&ab_channel=ParamountPictures",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "writers": [
+        "James Vanderbilt",
+        "Guy Busick",
+        "Kevin Williamson"
+      ],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -132,7 +164,11 @@
         "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
       ],
       "time": "1h 54m",
-      "type": ["Horror", "Mystery", "Thriller"],
+      "type": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
       "id": 5
     },
     {
@@ -140,7 +176,11 @@
       "trailer": "https://www.youtube.com/watch?v=0U0L4uT0btQ&ab_channel=WaltDisneyStudios",
       "release": "05/12/2021",
       "director": "John C. Donkin",
-      "writers": ["Jim Hecht", "William Schifrin", "Ray DeLaurentis"],
+      "writers": [
+        "Jim Hecht",
+        "William Schifrin",
+        "Ray DeLaurentis"
+      ],
       "stars": [
         "Utkarsh Ambudkar",
         "Sean Kenin",
@@ -159,7 +199,11 @@
         "https://m.media-amazon.com/images/M/MV5BZDI1MGYwNTctNTRkOS00NTBlLTgxZTEtODkzYmEzY2ExYmQ2XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_UY100_CR39,0,100,100_AL_.jpg"
       ],
       "time": "1h 22m",
-      "type": ["Animation", "Comedy", "Family"],
+      "type": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
       "id": 6
     },
     {
@@ -167,7 +211,11 @@
       "trailer": "https://www.youtube.com/watch?v=mqqft2x_Aa4&ab_channel=WarnerBros.Pictures",
       "release": "04/03/2022",
       "director": "Matt Reeves",
-      "writers": ["Matt Reeves", "Peter Craig", "Bill Finger"],
+      "writers": [
+        "Matt Reeves",
+        "Peter Craig",
+        "Bill Finger"
+      ],
       "stars": [
         "Robert Pattinson",
         "Zoë Kravitz",
@@ -186,7 +234,11 @@
         "https://m.media-amazon.com/images/M/MV5BNWMyMDg0NzEtZTllMS00OWNkLTkwMGYtMGM2NTA2MWYyODI2XkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_FMjpg_UX1200_.jpg"
       ],
       "time": "2h 55m",
-      "type": ["Action", "Crime", "Drama"],
+      "type": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
       "id": 7
     },
     {
@@ -194,7 +246,11 @@
       "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
+      "writers": [
+        "James Vanderbilt",
+        "Guy Busick",
+        "Kevin Williamson"
+      ],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -213,7 +269,11 @@
         "https://m.media-amazon.com/images/M/MV5BMWQ3MTdkODQtMjZiYi00ZjUzLWIzNjMtNjg3NjdiYWNkMGUzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1280_.jpg"
       ],
       "time": "2h 11m",
-      "type": ["Action", "Aventure", "Thriller"],
+      "type": [
+        "Action",
+        "Aventure",
+        "Thriller"
+      ],
       "id": 8
     },
     {
@@ -221,7 +281,11 @@
       "trailer": "https://www.youtube.com/watch?v=CaimKeDcudo",
       "release": "05/12/2021",
       "director": "Jared Bush",
-      "writers": ["Charise Castro Smith", "Jared Bush", "Charise Castro"],
+      "writers": [
+        "Charise Castro Smith",
+        "Jared Bush",
+        "Charise Castro"
+      ],
       "stars": [
         "Stephanie Beatriz",
         "María Cecilia Botero",
@@ -240,7 +304,11 @@
         "https://m.media-amazon.com/images/M/MV5BYTQ0NDFiMGItZTY2ZC00MDExLTkyZjQtNTM4OGM0YzZhM2JlXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg"
       ],
       "time": "1h 42m",
-      "type": ["Animation", "Comedy", "Family"],
+      "type": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
       "id": 9
     }
   ],
@@ -252,7 +320,12 @@
       "password": "admin",
       "isAdmin": true,
       "avatar": "https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1646599762~hmac=96dc2813e9c9ea106800c363f1d08e2a",
-      "favoriteMoviesIds": [3, 2, 4, 5]
+      "favoriteMoviesIds": [
+        3,
+        2,
+        4,
+        5
+      ]
     },
     {
       "id": 2,
@@ -261,7 +334,12 @@
       "password": "user",
       "isAdmin": false,
       "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-      "favoriteMoviesIds": [6, 2, 7, 3]
+      "favoriteMoviesIds": [
+        6,
+        2,
+        7,
+        3
+      ]
     },
     {
       "name": "Adrian",
