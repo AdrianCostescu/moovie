@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { PrimaryButton } from "../components/core/Button";
@@ -7,6 +8,14 @@ import { useCurrentUser } from "../context/UserContext";
 import { color } from "../styles/color";
 
 const Card = ({ title, type, score, img, release, id }) => {
+  Card.propTypes = {
+    title: PropTypes.string,
+    type: PropTypes.array,
+    score: PropTypes.number,
+    img: PropTypes.string,
+    release: PropTypes.string,
+    id: PropTypes.number,
+  };
   const { user, refetch } = useCurrentUser();
   const navigate = useNavigate();
 

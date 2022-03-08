@@ -47,9 +47,6 @@ const Movies = () => {
     favoriteMoviesIds.find((movieId) => movieId == id)
   );
 
-  console.log(favoriteMoviesIds);
-  console.log(isMovieAlreadyFavorite);
-
   const [addMovie] = useAddMovieToFavorite();
 
   async function addMovieToFavorite() {

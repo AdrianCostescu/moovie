@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useGetMovies } from "../hooks/useGetMovies";
 import Card from "./Card";
 import { color } from "../styles/color";
+import PropTypes from "prop-types";
 import { ErrorPosition } from "../pages/Favorite";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Error } from "../components/Header";
@@ -13,6 +14,9 @@ import { Main } from "./Main";
 import { UserContextProvider } from "../context/UserContext";
 
 function CategoriesTypeWithProviders({ children }) {
+  CategoriesTypeWithProviders.propTypes = {
+    children: PropTypes.node,
+  };
   return (
     <UserContextProvider>
       <CategoriesType>{children}</CategoriesType>

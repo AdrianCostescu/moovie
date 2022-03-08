@@ -14,7 +14,6 @@ function Avatar() {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const { user, resetState } = useCurrentUser();
-  console.log(user);
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {

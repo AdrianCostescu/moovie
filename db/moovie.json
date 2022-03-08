@@ -1,14 +1,38 @@
 {
   "movies": [
     {
+      "title": "Don't Look Up",
+      "trailer": "https://www.youtube.com/watch?v=RbIxYm3mKzI",
+      "release": "05/12/2021",
+      "director": "Adam McKay",
+      "writers": ["Adam McKay", "David Sirota"],
+      "stars": [
+        "Leonardo DiCaprio",
+        "Jennifer Lawrence",
+        "Meryl Streep",
+        "Cate Blanchett",
+        "Rob Morgan",
+        "Jonah Hill",
+        "Mark Rylance"
+      ],
+      "description": "Kate Dibiasky (Jennifer Lawrence), an astronomy grad student, and her professor Dr. Randall Mindy (Leonardo DiCaprio) make an astounding discovery of a comet orbiting within the solar system. The problem - it's on a direct collision course with Earth. The other problem? No one really seems to care. Turns out warning mankind about a planet-killer the size of Mount Everest is an inconvenient fact to navigate. With the help of Dr. Oglethorpe (Rob Morgan), Kate and Randall embark on a media tour that takes them from the office of an indifferent President Orlean (Meryl Streep) and her sycophantic son and Chief of Staff, Jason (Jonah Hill), to the airwaves of The Daily Rip, an upbeat morning show hosted by Brie (Cate Blanchett) and Jack (Tyler Perry). With only six months until the comet makes impact, managing the 24-hour news cycle and gaining the attention of the social media obsessed public before it's too late proves shockingly comical - what will it take to get the world to just look up?",
+      "score": "7.2",
+      "image": [
+        "https://m.media-amazon.com/images/M/MV5BNjZjNDE1NTYtYTgwZS00M2VmLWEyODktM2FlNjhiYTk3OGU2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZWFmZDVhY2YtODI4MC00YTAwLWI1NGUtYTQ3NjdkODU0YmZiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX100_CR0,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZjBiOTJkYzItZDg5My00MDFjLTllYjMtMjhhMWExZjUwNzc1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR25,0,100,100_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZjJjZjFiNTQtOTgzZC00ZjlkLWI2YTQtYWRlMzdjODhiZjlmXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX100_CR0,0,100,100_AL_.jpg"
+      ],
+      "time": "2h 18m",
+      "type": ["Comedy", "Drama", "Sci-Fi"],
+      "id": 1
+    },
+    {
       "title": "The Unforgivable",
       "trailer": "http://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Nora Fingscheidt",
-      "writers": [
-        "Peter Craig",
-        "Hillary Seitz"
-      ],
+      "writers": ["Peter Craig", "Hillary Seitz"],
       "stars": [
         "Sandra Bullock",
         "Viola Davis",
@@ -27,10 +51,7 @@
         "https://m.media-amazon.com/images/M/MV5BOGJiOGY4ZGItOTI0MS00NWVmLWE5NDEtZmVmNTI5NTFjOWIxXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_UY100_CR25,0,100,100_AL_.jpg"
       ],
       "time": "1h 51m",
-      "type": [
-        "Crime",
-        "Drama"
-      ],
+      "type": ["Crime", "Drama"],
       "id": 2
     },
     {
@@ -38,9 +59,7 @@
       "trailer": "https://www.youtube.com/watch?v=Pj0wz7zu3Ms&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Rawson Marshall Thurber",
-      "writers": [
-        "Rawson Marshall Thurber"
-      ],
+      "writers": ["Rawson Marshall Thurber"],
       "stars": [
         "Dwayne Johnson",
         "Ryan Reynolds",
@@ -59,11 +78,7 @@
         "https://m.media-amazon.com/images/M/MV5BOWI2MmMyY2MtNTkwZS00ZTdhLWFhYjUtZDYxMTUzMjI0YmRkXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "1h 58m",
-      "type": [
-        "Action",
-        "Comedy",
-        "Thriller"
-      ],
+      "type": ["Action", "Comedy", "Thriller"],
       "id": 3
     },
     {
@@ -71,12 +86,7 @@
       "trailer": "https://www.youtube.com/watch?v=JfVOs4VSpmA&ab_channel=SonyPicturesEntertainment",
       "release": "05/12/2021",
       "director": "Jon Watts",
-      "writers": [
-        "Chris McKenna",
-        "Erik Sommers",
-        "Stan Lee",
-        "Steve Ditko"
-      ],
+      "writers": ["Chris McKenna", "Erik Sommers", "Stan Lee", "Steve Ditko"],
       "stars": [
         "Tom Holland",
         "Zendaya Maree",
@@ -95,11 +105,7 @@
         "https://m.media-amazon.com/images/M/MV5BMTNiNGNjNmQtZjcwMi00ZGM1LTg3MzUtY2JiOGNjNWVlNjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX100_CR0,0,100,100_AL_.jpg"
       ],
       "time": "2h 28m",
-      "type": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
+      "type": ["Action", "Adventure", "Fantasy"],
       "id": 4
     },
     {
@@ -107,11 +113,7 @@
       "trailer": "https://www.youtube.com/watch?v=beToTslH17s&ab_channel=ParamountPictures",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": [
-        "James Vanderbilt",
-        "Guy Busick",
-        "Kevin Williamson"
-      ],
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -130,11 +132,7 @@
         "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
       ],
       "time": "1h 54m",
-      "type": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
+      "type": ["Horror", "Mystery", "Thriller"],
       "id": 5
     },
     {
@@ -142,11 +140,7 @@
       "trailer": "https://www.youtube.com/watch?v=0U0L4uT0btQ&ab_channel=WaltDisneyStudios",
       "release": "05/12/2021",
       "director": "John C. Donkin",
-      "writers": [
-        "Jim Hecht",
-        "William Schifrin",
-        "Ray DeLaurentis"
-      ],
+      "writers": ["Jim Hecht", "William Schifrin", "Ray DeLaurentis"],
       "stars": [
         "Utkarsh Ambudkar",
         "Sean Kenin",
@@ -165,58 +159,42 @@
         "https://m.media-amazon.com/images/M/MV5BZDI1MGYwNTctNTRkOS00NTBlLTgxZTEtODkzYmEzY2ExYmQ2XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_UY100_CR39,0,100,100_AL_.jpg"
       ],
       "time": "1h 22m",
-      "type": [
-        "Animation",
-        "Comedy",
-        "Family"
-      ],
+      "type": ["Animation", "Comedy", "Family"],
       "id": 6
     },
     {
-      "title": "Scream",
-      "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
-      "release": "05/12/2021",
-      "director": "Matt Bettinelli-Olpin",
-      "writers": [
-        "James Vanderbilt",
-        "Guy Busick",
-        "Kevin Williamson"
-      ],
+      "title": "The Batman",
+      "trailer": "https://www.youtube.com/watch?v=mqqft2x_Aa4&ab_channel=WarnerBros.Pictures",
+      "release": "04/03/2022",
+      "director": "Matt Reeves",
+      "writers": ["Matt Reeves", "Peter Craig", "Bill Finger"],
       "stars": [
-        "Neve Campbell",
-        "Courteney Cox",
-        "David Arquette",
-        "Melissa Barrera",
-        "Jack Quaid",
-        "Mikey Madison",
+        "Robert Pattinson",
+        "Zoë Kravitz",
+        "Jeffrey Wright",
+        "Colin Farrell",
+        "Paul Dano",
+        "John Turturro",
         "Jenna Ortega"
       ],
-      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
-      "score": "7.0",
+      "description": "When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+      "score": "8.5",
       "image": [
-        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
-        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+        "https://m.media-amazon.com/images/M/MV5BOGE2NWUwMDItMjA4Yi00N2Y3LWJjMzEtMDJjZTMzZTdlZGE5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMjU5ZTI4NjYtNjg5OC00NjQwLTk4M2QtMDJlZDNmMGQyZDY2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1280_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNTlhMmIxZWEtNzg5MC00M2U1LTk1YWQtMzVmOGE0ZGJkZDBjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNWMyMDg0NzEtZTllMS00OWNkLTkwMGYtMGM2NTA2MWYyODI2XkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_FMjpg_UX1200_.jpg"
       ],
-      "time": "1h 54m",
-      "type": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
+      "time": "2h 55m",
+      "type": ["Action", "Crime", "Drama"],
       "id": 7
     },
     {
-      "title": "Scream",
+      "title": "The King's Man",
       "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
       "release": "05/12/2021",
       "director": "Matt Bettinelli-Olpin",
-      "writers": [
-        "James Vanderbilt",
-        "Guy Busick",
-        "Kevin Williamson"
-      ],
+      "writers": ["James Vanderbilt", "Guy Busick", "Kevin Williamson"],
       "stars": [
         "Neve Campbell",
         "Courteney Cox",
@@ -226,55 +204,43 @@
         "Mikey Madison",
         "Jenna Ortega"
       ],
-      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
-      "score": "7.0",
+      "description": "In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.",
+      "score": "6.4",
       "image": [
-        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
-        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+        "https://m.media-amazon.com/images/M/MV5BMDEzZDY2ZDktNTlmOS00NThjLThkNTEtMjE5MzI5NWEwZmRjXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZjRmODE1YWItNTYyYS00ZjE5LTlmNGItNzRjZTU4M2YwNmJlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1280_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOTY5YzIwMjktZjQ3Ny00NDUyLTg2MjctNTQ3NzQ5NjY2YzljXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1280_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMWQ3MTdkODQtMjZiYi00ZjUzLWIzNjMtNjg3NjdiYWNkMGUzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1280_.jpg"
       ],
-      "time": "1h 54m",
-      "type": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
+      "time": "2h 11m",
+      "type": ["Action", "Aventure", "Thriller"],
       "id": 8
     },
     {
-      "title": "Scream",
-      "trailer": "https://www.youtube.com/watch?v=JNUjx7LZoiU&ab_channel=Netflix",
+      "title": "Encanto",
+      "trailer": "https://www.youtube.com/watch?v=CaimKeDcudo",
       "release": "05/12/2021",
-      "director": "Matt Bettinelli-Olpin",
-      "writers": [
-        "James Vanderbilt",
-        "Guy Busick",
-        "Kevin Williamson"
-      ],
+      "director": "Jared Bush",
+      "writers": ["Charise Castro Smith", "Jared Bush", "Charise Castro"],
       "stars": [
-        "Neve Campbell",
-        "Courteney Cox",
-        "David Arquette",
-        "Melissa Barrera",
-        "Jack Quaid",
-        "Mikey Madison",
-        "Jenna Ortega"
+        "Stephanie Beatriz",
+        "María Cecilia Botero",
+        "John Leguizamo",
+        "Mauro Castillo",
+        "Jessica Darrow",
+        "Angie Cepeda",
+        "Carolina Gaitan"
       ],
-      "description": "Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.",
-      "score": "7.0",
+      "description": "Encanto tells the tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from super strength to the power to heal-every child except one, Mirabel.",
+      "score": "7.3",
       "image": [
-        "https://www.udiscovermusic.com/wp-content/uploads/2022/01/Scream-2022-soundtrack-438x438.jpg",
-        "https://m.media-amazon.com/images/M/MV5BM2FhZDNhNWYtNjVkMC00NDViLThhMGItNGRjMGEwNjRkYzhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY100_CR30,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BYTgwMGVmYzgtMzg1OS00OGM1LWI4YjgtMTdhYzBjNmI3N2UwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY100_CR69,0,100,100_AL_.jpg",
-        "https://m.media-amazon.com/images/M/MV5BNTAwNDdhYzEtZjdmZC00ZWE0LWI0MTEtYjMzYzk2YzQ4YzUyXkEyXkFqcGdeQXVyMjI3NzE4MTM@._V1_UY100_CR51,0,100,100_AL_.jpg"
+        "https://m.media-amazon.com/images/M/MV5BNjE5NzA4ZDctOTJkZi00NzM0LTkwOTYtMDI4MmNkMzIxODhkXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZGQ3MWVmNmEtM2NlYS00NDAwLWE3ZjctMzljYTcwYjRmNDhlXkEyXkFqcGdeQXVyMTM1MjQ4OTYx._V1_FMjpg_UX1280_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOGU0M2JmNjctYzQ4MC00NGMxLTg3OGEtNDUwMTgzYzdhN2YyXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTQ0NDFiMGItZTY2ZC00MDExLTkyZjQtNTM4OGM0YzZhM2JlXkEyXkFqcGdeQXVyMTIwODk1NTQ@._V1_FMjpg_UX1280_.jpg"
       ],
-      "time": "1h 54m",
-      "type": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
+      "time": "1h 42m",
+      "type": ["Animation", "Comedy", "Family"],
       "id": 9
     }
   ],
@@ -286,12 +252,7 @@
       "password": "admin",
       "isAdmin": true,
       "avatar": "https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1646599762~hmac=96dc2813e9c9ea106800c363f1d08e2a",
-      "favoriteMoviesIds": [
-        3,
-        2,
-        4,
-        5
-      ]
+      "favoriteMoviesIds": [3, 2, 4, 5]
     },
     {
       "id": 2,
@@ -300,12 +261,7 @@
       "password": "user",
       "isAdmin": false,
       "avatar": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-      "favoriteMoviesIds": [
-        6,
-        2,
-        7,
-        3
-      ]
+      "favoriteMoviesIds": [6, 2, 7, 3]
     },
     {
       "name": "Adrian",

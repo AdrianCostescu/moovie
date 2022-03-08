@@ -12,7 +12,6 @@ export function Badge({ count, children }) {
   );
 }
 
-// TODO: read about proptypes
 Badge.propTypes = {
   count: PropTypes.number,
   children: PropTypes.node,

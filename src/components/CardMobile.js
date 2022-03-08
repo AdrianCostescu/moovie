@@ -1,9 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { color } from "../styles/color";
 import { Link } from "react-router-dom";
 
 const CardMobile = ({ id, title, release, img }) => {
+  CardMobile.propTypes = {
+    title: PropTypes.string,
+    img: PropTypes.string,
+    release: PropTypes.string,
+    id: PropTypes.number,
+  };
   return (
     <Link to={"/movies/" + id}>
       <CardMobileBox>

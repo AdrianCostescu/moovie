@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { color } from "../styles/color";
 import styled from "styled-components";
 import { usePostVideoMutation } from "../hooks/usePostVideoMutation";
@@ -10,6 +11,10 @@ import { PrimaryButton, TransparentButton } from "./core/Button";
 import { CATEGORIES } from "../constants";
 
 const AddMovie = ({ handleCancel, onSuccesAdd }) => {
+  AddMovie.propTypes = {
+    handleCancel: PropTypes.func,
+    onSuccesAdd: PropTypes.func,
+  };
   const [types, setTypes] = useState([]);
   const [images, setImage] = useState([]);
   const [addMovie, response] = usePostVideoMutation();

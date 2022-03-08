@@ -14,7 +14,7 @@ function Campton() {
 
 export const GlobalStyle = createGlobalStyle`
     ${() => css`
-      ${normalize()}; //TODO
+      ${normalize()};
       ${Campton()};
 
       html {

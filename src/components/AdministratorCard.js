@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { color } from "../styles/color";
 import Delete from "../img/delete.png";
@@ -13,6 +14,13 @@ import Modal, {
 import { useDeleteMovieById } from "../hooks/useDeleteMovieById";
 
 const AdministratorCard = ({ img, title, data, type, id, onDeleteSuccess }) => {
+  AdministratorCard.propTypes = {
+    img: PropTypes.string,
+    title: PropTypes.string,
+    data: PropTypes.string,
+    id: PropTypes.number,
+    onDeleteSuccess: PropTypes.func,
+  };
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [deleteMovie, response] = useDeleteMovieById();
 
